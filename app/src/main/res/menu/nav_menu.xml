@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+
+        <item
+            android:id="@+id/KitapAraFragment"
+            android:icon="@drawable/ic_search"
+            android:title="Kitap Ara"
+            />
+    </group>
+
+    <item
+        android:id="@+id/book_settings"
+        android:title="Kitaplarım Hakkında">
+
+        <menu>
+            <item
+                android:id="@+id/Kitaplarim8"
+                android:title="Kitaplarım" />
+
+            <item
+                android:id="@+id/KitapEkle"
+                android:title="Kitap Ekle" />
+
+
+        </menu>
+
+
+
+
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="HomePage" />
+
+
+
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/messagesFragment"
+            android:icon="@drawable/ic_message"
+            android:title="Message" />
+
+
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_mobile_friendly"
+            android:title="Friends" />
+
+
+
+
+
+
+    </item>
+</menu>

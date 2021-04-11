@@ -32,7 +32,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextEmail"
+                    android:id="@+id/editTxtGirisemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
@@ -73,7 +73,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextPassword"
+                        android:id="@+id/editTxtGirisSifre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="50dp"
