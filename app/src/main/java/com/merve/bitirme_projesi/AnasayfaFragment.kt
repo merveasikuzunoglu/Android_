@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_anasayfa.*
 
 class AnasayfaFragment : Fragment() {
 
@@ -20,6 +22,24 @@ class AnasayfaFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_anasayfa, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //giris yap buton yönlendirme
+        btnAGirisYap.setOnClickListener{
+        val action_giris = AnasayfaFragmentDirections.actionAnasayfaFragment2ToGirisFragment()
+        Navigation.findNavController(it).navigate(action_giris)
+
+        }
+        //kayıt ol buton yönlendirme
+        btnAKayitOl.setOnClickListener{
+            val action_kayit= AnasayfaFragmentDirections.actionAnasayfaFragment2ToKayitFragment()
+            Navigation.findNavController(it).navigate(action_kayit)
+        }
+
+
     }
 
 }

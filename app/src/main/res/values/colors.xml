@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="arkaplan">#d03e39</color>
+    <color name="arkaplan">#c59696</color>
     <color name="anaarkaplan">#e8c191</color>
+    <color name="ustbar">#353d54</color>
+    <color name="ilkrenk">#353d54</color>
 </resources>

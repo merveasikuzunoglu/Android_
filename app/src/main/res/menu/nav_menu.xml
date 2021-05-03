@@ -5,57 +5,92 @@
         <item
             android:id="@+id/KitapAraFragment"
             android:icon="@drawable/ic_search"
-            android:title="Kitap Ara"
-            />
+            android:title="Arama" />
     </group>
 
     <item
-        android:id="@+id/book_settings"
+        android:id="@+id/kitap_settings"
         android:title="Kitaplarım Hakkında">
+
+        <group>
 
         <menu>
             <item
-                android:id="@+id/Kitaplarim8"
-                android:title="Kitaplarım" />
+                android:id="@+id/Kitaplarim8Fragment"
+                android:title="Kitaplarım"
+                android:icon="@drawable/ic_books"
+                />
 
             <item
-                android:id="@+id/KitapEkle"
-                android:title="Kitap Ekle" />
+                android:id="@+id/KitapEkleFragment"
+                android:title="Kitap Ekle"
+                android:icon="@drawable/ic_kitapekle"/>
 
 
         </menu>
+        </group>
+    </item>
+
+
+    <item
+        android:id="@+id/islemlerim_settings"
+        android:title="İşlemlerim">
+
+        <group>
+
+            <menu>
+                <item
+                    android:id="@+id/SepetimFragment"
+                    android:title="Sepetim"
+                    android:icon="@drawable/ic_sepetim" />
+
+                <item
+                    android:id="@+id/SiparislerimFragment"
+                    android:title="Siparişlerim"
+                    android:icon="@drawable/ic_siparislerim"/>
+
+
+                <item
+                    android:id="@+id/SatislarimFragment"
+                    android:title="Satışlarım"
+                    android:icon="@drawable/ic_satislarim"/>
 
 
 
-
-
-        <item
-            android:id="@+id/homeFragment"
-            android:icon="@drawable/ic_profile"
-            android:title="HomePage" />
-
-
-
-        <item
-            android:id="@+id/profileFragment"
-            android:icon="@drawable/ic_profile"
-            android:title="Profile" />
-
-        <item
-            android:id="@+id/messagesFragment"
-            android:icon="@drawable/ic_message"
-            android:title="Message" />
-
-
-        <item
-            android:id="@+id/nav_friends"
-            android:icon="@drawable/ic_mobile_friendly"
-            android:title="Friends" />
-
-
-
-
-
+            </menu>
+        </group>
 
     </item>
+
+    <item
+        android:id="@+id/hesap_settings"
+        android:title="Hesap İşlemlerim">
+
+        <group>
+
+            <menu>
+                <item
+                    android:id="@+id/HesabimFragment"
+                    android:title="Hesabım"
+                    android:icon="@drawable/ic_hesabim"/>
+
+                <item
+                    android:id="@+id/AyarlarFragment"
+                    android:title="Ayarlar"
+                    android:icon="@drawable/ic_ayarlar"/>
+
+
+                <item
+                    android:id="@+id/CikisFragment"
+                    android:title="Çıkış Yap"
+                    android:icon="@drawable/ic_cikisyap" />
+
+
+            </menu>
+        </group>
+
+    </item>
+
+
+
 </menu>

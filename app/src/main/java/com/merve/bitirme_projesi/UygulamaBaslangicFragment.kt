@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_giris.*
+import kotlinx.android.synthetic.main.fragment_giris.btnGiris
+import kotlinx.android.synthetic.main.fragment_uygulama_baslangic.*
 
-class GirisFragment : Fragment() {
+class UygulamaBaslangicFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,16 +23,19 @@ class GirisFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_giris, container, false)
+        return inflater.inflate(R.layout.fragment_uygulama_baslangic, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnGiris.setOnClickListener{
-           val action_girissayfa= GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
-            Navigation.findNavController(it).navigate(action_girissayfa)
+        btnUygulama.setOnClickListener{
+            val action_uygulama= UygulamaBaslangicFragmentDirections.actionUygulamaBaslangicFragmentToAnasayfaFragment2()
+            Navigation.findNavController(it).navigate(action_uygulama)
         }
     }
+
+
 
 }

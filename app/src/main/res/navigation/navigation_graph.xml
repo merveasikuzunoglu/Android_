@@ -3,21 +3,116 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/anasayfaFragment">
-
+    app:startDestination="@id/uygulamaBaslangicFragment">
     <fragment
-        android:id="@+id/anasayfaFragment"
+        android:id="@+id/anasayfaFragment2"
         android:name="com.merve.bitirme_projesi.AnasayfaFragment"
         android:label="fragment_anasayfa"
-        tools:layout="@layout/fragment_anasayfa" />
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment2_to_girisFragment"
+            app:destination="@id/girisFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment2_to_kayitFragment"
+            app:destination="@id/kayitFragment" />
+    </fragment>
     <fragment
         android:id="@+id/girisFragment"
         android:name="com.merve.bitirme_projesi.GirisFragment"
         android:label="fragment_giris"
-        tools:layout="@layout/fragment_giris" />
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
     <fragment
         android:id="@+id/kayitFragment"
         android:name="com.merve.bitirme_projesi.KayitFragment"
         android:label="fragment_kayit"
-        tools:layout="@layout/fragment_kayit" />
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/action_kayitFragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/menuyeGecisActivity"
+        android:name="com.merve.bitirme_projesi.MenuyeGecisActivity"
+        android:label="activity_menuye_gecis"
+        tools:layout="@layout/activity_menuye_gecis" />
+    <fragment
+        android:id="@+id/kitapAraFragment"
+        android:name="com.merve.bitirme_projesi.KitapAraFragment"
+        android:label="fragment_kitap_ara"
+        tools:layout="@layout/fragment_kitap_ara" />
+    <fragment
+        android:id="@+id/kitaplarim8Fragment"
+        android:name="com.merve.bitirme_projesi.Kitaplarim8Fragment"
+        android:label="fragment_kitaplarim8"
+        tools:layout="@layout/fragment_kitaplarim8" >
+        <action
+            android:id="@+id/action_kitaplarim8Fragment_to_kitaplarim9Fragment"
+            app:destination="@id/kitaplarim9Fragment" />
+        <action
+            android:id="@+id/action_kitaplarim8Fragment_to_kitaplarim10Fragment"
+            app:destination="@id/kitaplarim10Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kitapEkleFragment"
+        android:name="com.merve.bitirme_projesi.KitapEkleFragment"
+        android:label="fragment_kitap_ekle"
+        tools:layout="@layout/fragment_kitap_ekle" >
+        <action
+            android:id="@+id/action_kitapEkleFragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetimFragment"
+        android:name="com.merve.bitirme_projesi.SepetimFragment"
+        android:label="fragment_sepetim"
+        tools:layout="@layout/fragment_sepetim" >
+        <action
+            android:id="@+id/action_sepetimFragment_to_odemeAdresFragment"
+            app:destination="@id/odemeAdresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hesabimFragment"
+        android:name="com.merve.bitirme_projesi.HesabimFragment"
+        android:label="fragment_hesabim"
+        tools:layout="@layout/fragment_hesabim" >
+        <action
+            android:id="@+id/action_hesabimFragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment android:id="@+id/siparis" />
+    <fragment android:id="@+id/satıslar" />
+    <fragment android:id="@+id/ayarlar" />
+    <fragment android:id="@+id/cikisyap" />
+    <fragment
+        android:id="@+id/kitaplarim9Fragment"
+        android:name="com.merve.bitirme_projesi.Kitaplarim9Fragment"
+        android:label="fragment_kitaplarim9"
+        tools:layout="@layout/fragment_kitaplarim9" />
+    <fragment
+        android:id="@+id/kitaplarim10Fragment"
+        android:name="com.merve.bitirme_projesi.Kitaplarim10Fragment"
+        android:label="fragment_kitaplarim10"
+        tools:layout="@layout/fragment_kitaplarim10" >
+        <action
+            android:id="@+id/action_kitaplarim10Fragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/odemeAdresFragment"
+        android:name="com.merve.bitirme_projesi.OdemeAdresFragment"
+        android:label="fragment_odeme_adres"
+        tools:layout="@layout/fragment_odeme_adres" />
+    <fragment
+        android:id="@+id/uygulamaBaslangicFragment"
+        android:name="com.merve.bitirme_projesi.UygulamaBaslangicFragment"
+        android:label="fragment_uygulama_baslangic"
+        tools:layout="@layout/fragment_uygulama_baslangic" >
+        <action
+            android:id="@+id/action_uygulamaBaslangicFragment_to_anasayfaFragment2"
+            app:destination="@id/anasayfaFragment2" />
+    </fragment>
 </navigation>
