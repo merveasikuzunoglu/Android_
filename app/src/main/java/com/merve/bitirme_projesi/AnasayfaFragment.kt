@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.fragment_anasayfa.*
 class AnasayfaFragment : Fragment() {
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

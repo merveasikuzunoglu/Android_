@@ -145,7 +145,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnGiris"
+                android:id="@+id/btnGirisYap"
                 android:layout_width="319dp"
                 android:layout_height="69dp"
                 android:layout_marginLeft="30dp"

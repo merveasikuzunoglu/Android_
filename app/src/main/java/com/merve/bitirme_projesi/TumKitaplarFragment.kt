@@ -9,6 +9,7 @@ import android.view.ViewGroup
 class TumKitaplarFragment : Fragment() {
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

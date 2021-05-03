@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_hesabim.*
-import kotlinx.android.synthetic.main.fragment_hesabim.btnHesabimDüzenle
 import kotlinx.android.synthetic.main.fragment_sepetim.*
 
 class SepetimFragment : Fragment() {

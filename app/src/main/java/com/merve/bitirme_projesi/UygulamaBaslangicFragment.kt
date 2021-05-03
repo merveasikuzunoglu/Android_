@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_giris.*
-import kotlinx.android.synthetic.main.fragment_giris.btnGiris
 import kotlinx.android.synthetic.main.fragment_uygulama_baslangic.*
 
 class UygulamaBaslangicFragment : Fragment() {

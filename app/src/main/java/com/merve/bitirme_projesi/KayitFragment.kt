@@ -27,7 +27,7 @@ class KayitFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnKayitOl.setOnClickListener{
+        btnKayit.setOnClickListener{
             val action_kayitsayfasi=KayitFragmentDirections.actionKayitFragmentToMenuyeGecisActivity()
             Navigation.findNavController(it).navigate(action_kayitsayfasi)
         }

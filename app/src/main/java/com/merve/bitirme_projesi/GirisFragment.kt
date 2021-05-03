@@ -27,7 +27,7 @@ class GirisFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnGiris.setOnClickListener{
+        btnGirisYap.setOnClickListener{
            val action_girissayfa= GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
             Navigation.findNavController(it).navigate(action_girissayfa)
         }

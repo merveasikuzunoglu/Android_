@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_giris.*
 import kotlinx.android.synthetic.main.fragment_hesabim.*
 
 class HesabimFragment : Fragment() {
@@ -30,7 +29,7 @@ class HesabimFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnHesabimDüzenle.setOnClickListener{
+        btnHesabimDuzenle.setOnClickListener{
             val action_hesabimduzenle=HesabimFragmentDirections.actionHesabimFragmentToMenuyeGecisActivity()
             Navigation.findNavController(it).navigate(action_hesabimduzenle)
         }
