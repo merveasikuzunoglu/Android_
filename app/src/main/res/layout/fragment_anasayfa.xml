@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AnasayfaFragment">
+    tools:context=".AnasayfaFragment"
+    android:background="@drawable/gradienty">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,13 +35,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="0.3"
-                tools:src="@tools:sample/backgrounds/scenic" />
+                tools:src="@drawable/icon" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.9"
+            android:layout_weight="2"
             android:orientation="vertical"></LinearLayout>
     </LinearLayout>
 
@@ -70,12 +71,15 @@
 
                 <Button
                     android:id="@+id/btnAGirisYap"
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_weight="1"
+                    android:layout_width="277dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/button_style"
                     android:text="Giriş Yap"
-                    android:textSize="36sp" />
+                    android:textAlignment="center"
+                    android:textColor="@color/ilkrenk"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,7 +92,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -105,12 +109,13 @@
 
                 <Button
                     android:id="@+id/btnAKayitOl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_width="277dp"
+                    android:layout_height="66dp"
                     android:layout_marginTop="40dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/button_style"
                     android:text="Kayıt Ol"
-                    android:textSize="36sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout

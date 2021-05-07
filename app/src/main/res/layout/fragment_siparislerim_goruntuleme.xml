@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradienty"
+    android:background="#FCD6C7"
     android:orientation="vertical"
     tools:context=".SiparislerimGoruntuleme">
 
@@ -39,8 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            ></LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -53,8 +52,8 @@
         android:paddingBottom="25dp">
 
         <LinearLayout
-            android:layout_width="364dp"
-            android:layout_height="312dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:orientation="vertical">
@@ -65,13 +64,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName11"
+                <TextView
+                    android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:ems="10"
-                    android:hint="Ad:"
-                    android:inputType="textPersonName"
+                    android:hint="Sipariş Numarası:2354657"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -81,13 +78,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName12"
+                <TextView
+                    android:id="@+id/textView13"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Soyad:"
-                    android:inputType="textPersonName"
+                    android:layout_height="match_parent"
+                    android:hint="Siparişin Verildiği Tarih:27.03.2021"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -97,13 +92,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress2"
+                <TextView
+                    android:id="@+id/textView14"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="E-Mail(Example@gmail.com)"
-                    android:inputType="textEmailAddress"
+                    android:layout_height="match_parent"
+                    android:hint="Tahmini Teslim Tarihi:2903.2021"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -113,13 +106,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextPhone3"
+                <TextView
+                    android:id="@+id/textView16"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Telefon No(050*******5)"
-                    android:inputType="phone"
+                    android:layout_height="match_parent"
+                    android:hint=" Sipariş Toplam:**TL"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -129,13 +120,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPassword"
+                <TextView
+                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Şifre:"
-                    android:inputType="textPassword"
+                    android:layout_height="match_parent"
+                    android:hint="Kargo Numarası:33333333"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -145,13 +134,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPassword2"
+                <TextView
+                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Şifre Tekrar:"
-                    android:inputType="textPassword"
+                    android:layout_height="match_parent"
+                    android:hint="Teslimat Durumu:Kargoda"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
@@ -171,11 +158,11 @@
                 android:paddingLeft="60dp"
                 android:paddingRight="60dp">
 
-                <CheckBox
-                    android:id="@+id/checkBox"
+                <Button
+                    android:id="@+id/button6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aydınlatma Metni'ni Okudum ve Kabul Ediyorum." />
+                    android:text="Alışveriş'e Devam Et" />
             </LinearLayout>
 
             <LinearLayout
@@ -187,13 +174,10 @@
                 android:paddingRight="60dp">
 
                 <Button
-                    android:id="@+id/btnAdresEkle"
+                    android:id="@+id/button7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_style"
-                    android:text="DEVAM(1/2)"
-                    android:textSize="18sp" />
-
+                    android:text="Sipariş İptal/İade" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -204,6 +188,3 @@
         android:layout_weight="1.1"
         android:orientation="vertical"></LinearLayout>
 </LinearLayout>
-
-
-

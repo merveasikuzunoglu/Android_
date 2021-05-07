@@ -32,8 +32,8 @@
         android:label="fragment_kayit"
         tools:layout="@layout/fragment_kayit" >
         <action
-            android:id="@+id/action_kayitFragment_to_menuyeGecisActivity"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_kayitFragment_to_adresEkle"
+            app:destination="@id/adresEkle" />
     </fragment>
     <activity
         android:id="@+id/menuyeGecisActivity"
@@ -81,13 +81,9 @@
         android:label="fragment_hesabim"
         tools:layout="@layout/fragment_hesabim" >
         <action
-            android:id="@+id/action_hesabimFragment_to_menuyeGecisActivity"
+            android:id="@+id/action_hesabimFragment_to_menuyeGecisActivity2"
             app:destination="@id/menuyeGecisActivity" />
     </fragment>
-    <fragment android:id="@+id/siparis" />
-    <fragment android:id="@+id/satıslar" />
-    <fragment android:id="@+id/ayarlar" />
-    <fragment android:id="@+id/cikisyap" />
     <fragment
         android:id="@+id/kitaplarim9Fragment"
         android:name="com.merve.bitirme_projesi.Kitaplarim9Fragment"
@@ -106,7 +102,11 @@
         android:id="@+id/odemeAdresFragment"
         android:name="com.merve.bitirme_projesi.OdemeAdresFragment"
         android:label="fragment_odeme_adres"
-        tools:layout="@layout/fragment_odeme_adres" />
+        tools:layout="@layout/fragment_odeme_adres" >
+        <action
+            android:id="@+id/action_odemeAdresFragment_to_odemeKartBilgileri"
+            app:destination="@id/odemeKartBilgileri" />
+    </fragment>
     <fragment
         android:id="@+id/uygulamaBaslangicFragment"
         android:name="com.merve.bitirme_projesi.UygulamaBaslangicFragment"
@@ -115,5 +115,58 @@
         <action
             android:id="@+id/action_uygulamaBaslangicFragment_to_anasayfaFragment2"
             app:destination="@id/anasayfaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ayarlar"
+        android:name="com.merve.bitirme_projesi.Ayarlar"
+        android:label="fragment_ayarlar"
+        tools:layout="@layout/fragment_ayarlar" >
+        <action
+            android:id="@+id/action_ayarlar_to_uyeBilgGuncelle"
+            app:destination="@id/uyeBilgGuncelle" />
+        <action
+            android:id="@+id/action_ayarlar_to_menuyeGecisActivity2"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/adresEkle"
+        android:name="com.merve.bitirme_projesi.AdresEkle"
+        android:label="fragment_adres_ekle"
+        tools:layout="@layout/fragment_adres_ekle" >
+        <action
+            android:id="@+id/action_adresEkle_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/odemeKartBilgileri"
+        android:name="com.merve.bitirme_projesi.OdemeKartBilgileri"
+        android:label="fragment_odeme_kart_bilgileri"
+        tools:layout="@layout/fragment_odeme_kart_bilgileri" >
+        <action
+            android:id="@+id/action_odemeKartBilgileri_to_siparislerimGoruntuleme"
+            app:destination="@id/siparislerimGoruntuleme" />
+    </fragment>
+    <fragment
+        android:id="@+id/siparislerimGoruntuleme"
+        android:name="com.merve.bitirme_projesi.SiparislerimGoruntuleme"
+        android:label="fragment_siparislerim_goruntuleme"
+        tools:layout="@layout/fragment_siparislerim_goruntuleme" >
+        <action
+            android:id="@+id/action_siparislerimGoruntuleme_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/uyeBilgGuncelle"
+        android:name="com.merve.bitirme_projesi.UyeBilgGuncelle"
+        android:label="fragment_uye_bilg_guncelle"
+        tools:layout="@layout/fragment_uye_bilg_guncelle" />
+    <fragment
+        android:id="@+id/sifreDegisklik"
+        android:name="com.merve.bitirme_projesi.SifreDegisklik"
+        android:label="fragment_sifre_degisklik"
+        tools:layout="@layout/fragment_sifre_degisklik" >
+        <action
+            android:id="@+id/action_sifreDegisklik_to_ayarlar"
+            app:destination="@id/ayarlar" />
     </fragment>
 </navigation>

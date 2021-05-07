@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Kitaplarim10Fragment">
+    tools:context=".Kitaplarim10Fragment"
+    android:background="@drawable/gradienty">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -607,6 +608,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
                     android:text="Kaydet"
+                    android:background="@drawable/button_style"
                     android:textSize="18sp" />
             </LinearLayout>
 

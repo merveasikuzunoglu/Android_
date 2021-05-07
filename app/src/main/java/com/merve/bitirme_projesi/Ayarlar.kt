@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_hesabim.*
+import kotlinx.android.synthetic.main.fragment_ayarlar.*
+import kotlinx.android.synthetic.main.fragment_kayit.*
 
-class HesabimFragment : Fragment() {
+class Ayarlar : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
     }
 
@@ -21,19 +21,19 @@ class HesabimFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hesabim, container, false)
+        return inflater.inflate(R.layout.fragment_ayarlar, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        btnHesabimDuzenle.setOnClickListener{
-            val action_hesabimduzenle=HesabimFragmentDirections.actionHesabimFragmentToMenuyeGecisActivity2()
-            Navigation.findNavController(it).navigate(action_hesabimduzenle)
+        btnKullaniciBilgileri.setOnClickListener{
+            val action_KullaniciBilgiGuncl = AyarlarDirections.actionAyarlarToUyeBilgGuncelle()
+            Navigation.findNavController(it).navigate(action_KullaniciBilgiGuncl)
         }
 
+
     }
+
+
 
 }

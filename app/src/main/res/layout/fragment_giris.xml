@@ -4,130 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradienty"
     android:orientation="vertical"
     tools:context=".GirisFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1.1"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:layout_weight="1"
+                android:src="@drawable/icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="25dp">
+
+        <LinearLayout
+            android:layout_width="364dp"
+            android:layout_height="312dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.3"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editTxtGirisemail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
+                    android:id="@+id/editTextTextEmailAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:ems="10"
-                    android:hint="email"
-                    android:inputType="textEmailAddress" />
+                    android:hint="E-Mail(Example@gmail.com)"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="center" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="horizontal"></LinearLayout>
-        </LinearLayout>
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
+                <EditText
+                    android:id="@+id/editTextTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.3"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/editTxtGirisSifre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPassword" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:ems="10"
+                    android:hint="Şifre:"
+                    android:inputType="textPassword"
+                    android:textAlignment="center" />
             </LinearLayout>
+
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="365dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="3"
+            android:background="#FFFFFF"
             android:orientation="vertical">
 
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="365dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:background="@drawable/gradienty"
+                android:orientation="vertical"
+                android:paddingLeft="60dp"
+                android:paddingTop="40dp"
+                android:paddingRight="60dp">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/btnGirisYap"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
+                    android:text="Giriş Yap"
+                    android:textSize="18sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.3"
-                    android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/checkBoxBeniHatirla"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:layout_weight="1"
-                        android:text="Beni Hatırla"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -135,44 +135,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnGirisYap"
-                android:layout_width="319dp"
-                android:layout_height="69dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="0.3"
-                android:text="Giriş Yap"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextSifremiUnuttum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Şifremi unuttum" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_weight="1.2"
+        android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>
+
+
