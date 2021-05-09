@@ -15,4 +15,14 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
+    <string-array name="kargolist">
+        <item>Gönderim Yapacağınız Kargoyu Seçiniz</item>
+        <item>PTT Kargo</item>
+        <item>UPS Kargo</item>
+        <item>ARAS Kargo</item>
+    </string-array>
+
+
 </resources>
