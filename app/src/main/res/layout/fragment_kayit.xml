@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradienty"
     android:orientation="vertical"
-    tools:context=".SiparislerimGoruntuleme">
+    tools:context=".view.SiparislerimGoruntuleme">
 
     <LinearLayout
         android:layout_width="match_parent"

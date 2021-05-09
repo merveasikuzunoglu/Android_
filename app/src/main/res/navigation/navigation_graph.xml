@@ -44,18 +44,22 @@
         android:id="@+id/kitapAraFragment"
         android:name="com.merve.bitirme_projesi.KitapAraFragment"
         android:label="fragment_kitap_ara"
-        tools:layout="@layout/fragment_kitap_ara" />
+        tools:layout="@layout/fragment_kitap_ara" >
+        <action
+            android:id="@+id/action_kitapAraFragment_to_tumKitapDetayFragment"
+            app:destination="@id/tumKitapDetayFragment" />
+    </fragment>
     <fragment
         android:id="@+id/kitaplarim8Fragment"
         android:name="com.merve.bitirme_projesi.Kitaplarim8Fragment"
         android:label="fragment_kitaplarim8"
         tools:layout="@layout/fragment_kitaplarim8" >
         <action
-            android:id="@+id/action_kitaplarim8Fragment_to_kitaplarim9Fragment"
-            app:destination="@id/kitaplarim9Fragment" />
-        <action
             android:id="@+id/action_kitaplarim8Fragment_to_kitaplarim10Fragment"
             app:destination="@id/kitaplarim10Fragment" />
+        <action
+            android:id="@+id/action_kitaplarim8Fragment_to_kitaplarim9Fragment"
+            app:destination="@id/kitaplarim9Fragment" />
     </fragment>
     <fragment
         android:id="@+id/kitapEkleFragment"
@@ -88,7 +92,12 @@
         android:id="@+id/kitaplarim9Fragment"
         android:name="com.merve.bitirme_projesi.Kitaplarim9Fragment"
         android:label="fragment_kitaplarim9"
-        tools:layout="@layout/fragment_kitaplarim9" />
+        tools:layout="@layout/fragment_kitaplarim9" >
+        <argument
+            android:name="kitapId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
     <fragment
         android:id="@+id/kitaplarim10Fragment"
         android:name="com.merve.bitirme_projesi.Kitaplarim10Fragment"
@@ -118,7 +127,7 @@
     </fragment>
     <fragment
         android:id="@+id/ayarlar"
-        android:name="com.merve.bitirme_projesi.Ayarlar"
+        android:name="com.merve.bitirme_projesi.view.Ayarlar"
         android:label="fragment_ayarlar"
         tools:layout="@layout/fragment_ayarlar" >
         <action
@@ -130,7 +139,7 @@
     </fragment>
     <fragment
         android:id="@+id/adresEkle"
-        android:name="com.merve.bitirme_projesi.AdresEkle"
+        android:name="com.merve.bitirme_projesi.view.AdresEkle"
         android:label="fragment_adres_ekle"
         tools:layout="@layout/fragment_adres_ekle" >
         <action
@@ -139,7 +148,7 @@
     </fragment>
     <fragment
         android:id="@+id/odemeKartBilgileri"
-        android:name="com.merve.bitirme_projesi.OdemeKartBilgileri"
+        android:name="com.merve.bitirme_projesi.view.OdemeKartBilgileri"
         android:label="fragment_odeme_kart_bilgileri"
         tools:layout="@layout/fragment_odeme_kart_bilgileri" >
         <action
@@ -148,7 +157,7 @@
     </fragment>
     <fragment
         android:id="@+id/siparislerimGoruntuleme"
-        android:name="com.merve.bitirme_projesi.SiparislerimGoruntuleme"
+        android:name="com.merve.bitirme_projesi.view.SiparislerimGoruntuleme"
         android:label="fragment_siparislerim_goruntuleme"
         tools:layout="@layout/fragment_siparislerim_goruntuleme" >
         <action
@@ -157,16 +166,30 @@
     </fragment>
     <fragment
         android:id="@+id/uyeBilgGuncelle"
-        android:name="com.merve.bitirme_projesi.UyeBilgGuncelle"
+        android:name="com.merve.bitirme_projesi.view.UyeBilgGuncelle"
         android:label="fragment_uye_bilg_guncelle"
         tools:layout="@layout/fragment_uye_bilg_guncelle" />
     <fragment
         android:id="@+id/sifreDegisklik"
-        android:name="com.merve.bitirme_projesi.SifreDegisklik"
+        android:name="com.merve.bitirme_projesi.view.SifreDegisklik"
         android:label="fragment_sifre_degisklik"
         tools:layout="@layout/fragment_sifre_degisklik" >
         <action
             android:id="@+id/action_sifreDegisklik_to_ayarlar"
             app:destination="@id/ayarlar" />
     </fragment>
+    <fragment
+        android:id="@+id/tumKitaplarFragment"
+        android:name="com.merve.bitirme_projesi.view.TumKitaplarFragment"
+        android:label="fragment_tum_kitaplar"
+        tools:layout="@layout/fragment_tum_kitaplar" >
+        <action
+            android:id="@+id/action_tumKitaplarFragment_to_tumKitapDetayFragment"
+            app:destination="@id/tumKitapDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tumKitapDetayFragment"
+        android:name="com.merve.bitirme_projesi.view.TumKitapDetayFragment"
+        android:label="fragment_tum_kitap_detay"
+        tools:layout="@layout/fragment_tum_kitap_detay" />
 </navigation>
