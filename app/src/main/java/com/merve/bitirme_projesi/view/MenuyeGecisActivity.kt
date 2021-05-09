@@ -17,6 +17,7 @@ class MenuyeGecisActivity : AppCompatActivity() ,NavigationView.OnNavigationItem
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menuye_gecis)

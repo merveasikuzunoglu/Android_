@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
+import com.merve.bitirme_projesi.Kitaplarim10FragmentDirections
 
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.viewmodel.Kitaplarim10ViewModel
