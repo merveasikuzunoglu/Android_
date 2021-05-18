@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.R
+import com.merve.bitirme_projesi.SepetimFragmentDirections
 import com.merve.bitirme_projesi.adapter.SepetRecyclerAdapter
 import com.merve.bitirme_projesi.viewmodel.SepetimViewModel
 

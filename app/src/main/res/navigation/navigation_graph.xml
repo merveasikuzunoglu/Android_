@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_girisFragment_to_menuyeGecisActivity"
             app:destination="@id/menuyeGecisActivity" />
+        <action
+            android:id="@+id/action_girisFragment_to_girisBasarisizFragment"
+            app:destination="@id/girisBasarisizFragment" />
     </fragment>
     <fragment
         android:id="@+id/kayitFragment"
@@ -192,4 +195,13 @@
         android:name="com.merve.bitirme_projesi.view.TumKitapDetayFragment"
         android:label="fragment_tum_kitap_detay"
         tools:layout="@layout/fragment_tum_kitap_detay" />
+    <fragment
+        android:id="@+id/girisBasarisizFragment"
+        android:name="com.merve.bitirme_projesi.view.GirisBasarisizFragment"
+        android:label="fragment_giris_basarisiz"
+        tools:layout="@layout/fragment_giris_basarisiz" >
+        <action
+            android:id="@+id/action_girisBasarisizFragment_to_kayitFragment"
+            app:destination="@id/kayitFragment" />
+    </fragment>
 </navigation>
