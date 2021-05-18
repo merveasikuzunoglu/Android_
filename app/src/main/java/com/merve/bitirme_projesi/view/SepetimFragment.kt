@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProviders
+///import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.adapter.SepetRecyclerAdapter
@@ -36,7 +36,7 @@ class SepetimFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //view model ile fragmenti birbirine bağladık
-        viewModel=ViewModelProviders.of(this).get(SepetimViewModel::class.java)
+       // viewModel=ViewModelProviders.of(this).get(SepetimViewModel::class.java)
 
         //sonrasında Sepetimviewmodel içerisinde yazdığımız intetnetten çekme fonksiyonunu burda çağırabiliriz
 

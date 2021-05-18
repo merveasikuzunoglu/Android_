@@ -36,7 +36,7 @@ class TumKitapDetayFragment : Fragment() {
         viewmodel=ViewModelProviders.of(this).get(TumDetayViewModel::class.java)
 
         TumDetaySepeteEkle.setOnClickListener{
-          val action= TumKitapDetayFragmentDirections.actionTumKitapDetayFragmentToSepetimFragment()
+         val action= TumKitaplarFragmentDirections.actionTumKitapDetayFragmentToSepetimFragment()
             Navigation.findNavController(it).navigate(action)
         }
         observeLiveData()

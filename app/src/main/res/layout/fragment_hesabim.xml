@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.HesabimFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradienty">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,8 +39,8 @@
 
                     <TextView
                         android:id="@+id/txtViewHesabim"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="30dp"
                         android:layout_weight="1"
                         android:text="Üyelik Bilgilerim"
@@ -303,7 +304,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Düzenle"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@drawable/button_style"/>
                 </LinearLayout>
 
                 <LinearLayout

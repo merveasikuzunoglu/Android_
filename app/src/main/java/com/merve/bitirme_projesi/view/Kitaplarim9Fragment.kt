@@ -58,7 +58,7 @@ class Kitaplarim9Fragment : Fragment() {
                 txtK9thg.text=it.kthg
                 txtK9kargo.text=it.kkargo
                 txtK9aciklama.text=it.kaciklama
-                txtK9fiyat.text=it.kfiyat
+                txtK9Fiyat.text = it.kfiyat
             }
 
         })

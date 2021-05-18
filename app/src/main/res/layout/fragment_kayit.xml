@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.4"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -39,170 +39,279 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            ></LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.4"
-        android:orientation="vertical"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingBottom="25dp">
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
 
         <LinearLayout
-            android:layout_width="364dp"
-            android:layout_height="312dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.7"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/edit_text_style"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1.2"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName11"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:ems="10"
-                    android:hint="Ad:"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center" />
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtAd"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Ad: "
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Soyad: "
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+
+                android:layout_weight="1.1"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName12"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Soyad:"
-                    android:inputType="textPersonName"
-                    android:textAlignment="center" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="E-Mail(Example@gmail.com)"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Telefon No(050*******5)"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_weight="1.1"
+                android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="E-Mail(Example@gmail.com)"
-                    android:inputType="textEmailAddress"
-                    android:textAlignment="center" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Şifre:"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Şifre Tekrar:"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextPhone3"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Telefon No(050*******5)"
-                    android:inputType="phone"
-                    android:textAlignment="center" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
 
-                <EditText
-                    android:id="@+id/editTextTextPassword"
+                        <EditText
+                            android:id="@+id/editTextTextPersonName14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text_style"
+                            android:ems="10"
+                            android:hint="İl:"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName15"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_text_style"
+                            android:ems="10"
+                            android:hint="İlçe:"
+                            android:inputType="textPersonName"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Şifre:"
-                    android:inputType="textPassword"
-                    android:textAlignment="center" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/editTextTextPersonName16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
 
-                <EditText
-                    android:id="@+id/editTextTextPassword2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Şifre Tekrar:"
-                    android:inputType="textPassword"
-                    android:textAlignment="center" />
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:ems="10"
+                        android:hint="Açık Adres: "
+                        android:inputType="textPersonName"
+                        android:textAlignment="center" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:background="#FFFFFF"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp">
-
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Aydınlatma Metni'ni Okudum ve Kabul Ediyorum." />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingLeft="60dp"
-                android:paddingRight="60dp">
-
-                <Button
-                    android:id="@+id/btnAdresEkle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_style"
-                    android:text="DEVAM(1/2)"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_weight="3.7"
+            android:orientation="horizontal"></LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.1"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:paddingLeft="80dp"
+        android:paddingTop="20dp"
+        android:paddingRight="80dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:text="Kaydol" />
+    </LinearLayout>
 </LinearLayout>
 
 

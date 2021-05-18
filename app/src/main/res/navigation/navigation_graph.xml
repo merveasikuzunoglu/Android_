@@ -30,11 +30,7 @@
         android:id="@+id/kayitFragment"
         android:name="com.merve.bitirme_projesi.KayitFragment"
         android:label="fragment_kayit"
-        tools:layout="@layout/fragment_kayit" >
-        <action
-            android:id="@+id/action_kayitFragment_to_adresEkle"
-            app:destination="@id/adresEkle" />
-    </fragment>
+        tools:layout="@layout/fragment_kayit" />
     <activity
         android:id="@+id/menuyeGecisActivity"
         android:name="com.merve.bitirme_projesi.MenuyeGecisActivity"
@@ -141,11 +137,7 @@
         android:id="@+id/adresEkle"
         android:name="com.merve.bitirme_projesi.view.AdresEkle"
         android:label="fragment_adres_ekle"
-        tools:layout="@layout/fragment_adres_ekle" >
-        <action
-            android:id="@+id/action_adresEkle_to_menuyeGecisActivity"
-            app:destination="@id/menuyeGecisActivity" />
-    </fragment>
+        tools:layout="@layout/fragment_adres_ekle" />
     <fragment
         android:id="@+id/odemeKartBilgileri"
         android:name="com.merve.bitirme_projesi.view.OdemeKartBilgileri"
@@ -186,6 +178,9 @@
         <action
             android:id="@+id/action_tumKitaplarFragment_to_tumKitapDetayFragment"
             app:destination="@id/tumKitapDetayFragment" />
+        <action
+            android:id="@+id/action_tumKitaplarFragment_to_kitaplarim10Fragment"
+            app:destination="@id/kitaplarim10Fragment" />
     </fragment>
     <fragment
         android:id="@+id/tumKitapDetayFragment"
