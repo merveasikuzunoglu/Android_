@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.Kitaplarim10FragmentDirections
 
@@ -32,12 +31,14 @@ class Kitaplarim10Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel=ViewModelProviders.of(this).get(Kitaplarim10ViewModel::class.java)
+       // viewmodel=ViewModelProviders.of(this).get(Kitaplarim10ViewModel::class.java)
+        //viewmodel = ViewModel
+        //viewmodel = ViewModelProviders.of(this).get(Kitaplarim10ViewModel::class.java)
 
         //kitap bilgisi düzenledikten sonra menuye geç
         btnK10kaydet.setOnClickListener{
             val action_kitapduzenleyipkaydet=
-                Kitaplarim10FragmentDirections.actionKitaplarim10FragmentToMenuyeGecisActivity()
+                 Kitaplarim10FragmentDirections.actionKitaplarim10FragmentToMenuyeGecisActivity()
             Navigation.findNavController(it).navigate(action_kitapduzenleyipkaydet)
         }
 

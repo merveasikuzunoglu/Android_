@@ -58,10 +58,10 @@
         android:paddingBottom="25dp">
 
         <LinearLayout
-            android:layout_width="364dp"
+            android:layout_width="344dp"
             android:layout_height="312dp"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="@drawable/gradienty"
             android:orientation="vertical">
 
 
@@ -75,6 +75,7 @@
                     android:id="@+id/editTxtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_style"
                     android:ems="10"
                     android:hint="E-Mail(Example@gmail.com)"
                     android:inputType="textEmailAddress"
@@ -92,6 +93,7 @@
                     android:id="@+id/editTxtPasswordGiris"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/edit_text_style"
                     android:ems="10"
                     android:hint="Şifre:"
                     android:inputType="textPassword"
@@ -110,7 +112,7 @@
 
 
             <LinearLayout
-                android:layout_width="365dp"
+                android:layout_width="351dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/gradienty"

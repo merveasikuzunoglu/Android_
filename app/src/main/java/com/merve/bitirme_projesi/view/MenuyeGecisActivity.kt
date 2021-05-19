@@ -97,7 +97,8 @@ class MenuyeGecisActivity : AppCompatActivity() ,NavigationView.OnNavigationItem
 
             R.id.AyarlarFragment -> {
                 setToolBarTitle("Ayarlar")
-                //changeFragment(AyarlarFragment())
+                changeFragment(Ayarlar())
+
 
             }
             R.id.CikisFragment -> {
