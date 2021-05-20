@@ -17,6 +17,7 @@ import com.merve.bitirme_projesi.model.GirisRequest
 import com.merve.bitirme_projesi.model.GirisResponse
 import com.merve.bitirme_projesi.model.KayitRequest
 import kotlinx.android.synthetic.main.fragment_giris.*
+import kotlinx.android.synthetic.main.fragment_kayit.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -39,7 +40,8 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
                     return@setOnClickListener
                 }
                 else if(editTxtPasswordGiris.text.isEmpty()){
-                    Toast.makeText(it,"Şifre alanı boş bırakılamaz", Toast.LENGTH_LONG).show()
+                    editTxtPasswordGiris.error="Şifre alanı boş bırakılamaz"
+                    return@setOnClickListener
                 }
                 else if(!Patterns.EMAIL_ADDRESS.matcher(editTxtEmail.text).matches()){
                     editTxtEmail.error="Girilen email, email formatına uygun değil"
@@ -57,9 +59,9 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
 
     fun login(){
         val request=GirisRequest()
-        val requestka=KayitRequest()
         request.email=editTxtEmail.text.toString().trim()
         request.password=editTxtPasswordGiris.text.toString().trim()
+
 
         val retro=RetrofitProvider().downloadData().create(ProjeApi::class.java)
         retro.login(request).enqueue(object : Callback<GirisResponse>{
@@ -77,12 +79,7 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
 
             override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
                 Log.e("error","giris hatalı böyle bir kayıt yok",t)
-               //kayit ve giriş emaili aynı fakat giriş yapılamıyor ise
-                if(request.email==requestka.email){
-                    context?.let{
-                        Toast.makeText(it,"Şifre hatalı", Toast.LENGTH_LONG).show()
-                    }
-                }
+
 
                 view?.let{
                     val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
