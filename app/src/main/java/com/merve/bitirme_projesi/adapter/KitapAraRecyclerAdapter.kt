@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.merve.bitirme_projesi.KitapAraFragmentDirections
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.model.KitapAra
 import com.merve.bitirme_projesi.util.gorselIndir2
 import com.merve.bitirme_projesi.util.placeholderYap
+import com.merve.bitirme_projesi.view.KitapAraFragmentDirections
 import kotlinx.android.synthetic.main.recycler_row_kitapara.view.*
 
 class KitapAraRecyclerAdapter(val kitaparaListesi:ArrayList<KitapAra>): RecyclerView.Adapter<KitapAraRecyclerAdapter.AraViewHolder>() {

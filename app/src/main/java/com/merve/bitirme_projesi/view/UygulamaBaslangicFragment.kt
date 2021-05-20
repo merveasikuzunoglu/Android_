@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.R
-import com.merve.bitirme_projesi.UygulamaBaslangicFragmentDirections
+
 
 import kotlinx.android.synthetic.main.fragment_uygulama_baslangic.*
 
