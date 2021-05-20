@@ -111,15 +111,6 @@
             app:destination="@id/menuyeGecisActivity" />
     </fragment>
     <fragment
-        android:id="@+id/odemeAdresFragment"
-        android:name="com.merve.bitirme_projesi.view.OdemeAdresFragment"
-        android:label="fragment_odeme_adres"
-        tools:layout="@layout/fragment_odeme_adres" >
-        <action
-            android:id="@+id/action_odemeAdresFragment_to_odemeKartBilgileri"
-            app:destination="@id/odemeKartBilgileri" />
-    </fragment>
-    <fragment
         android:id="@+id/uygulamaBaslangicFragment"
         android:name="com.merve.bitirme_projesi.view.UygulamaBaslangicFragment"
         android:label="fragment_uygulama_baslangic"
