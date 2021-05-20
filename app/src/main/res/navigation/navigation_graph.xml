@@ -78,9 +78,7 @@
         android:name="com.merve.bitirme_projesi.view.SepetimFragment"
         android:label="fragment_sepetim"
         tools:layout="@layout/fragment_sepetim" >
-        <action
-            android:id="@+id/action_sepetimFragment_to_odemeAdresFragment"
-            app:destination="@id/odemeAdresFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/hesabimFragment"
