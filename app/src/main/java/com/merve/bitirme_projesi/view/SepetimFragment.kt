@@ -44,11 +44,9 @@ class SepetimFragment : Fragment() {
 
 
 
-        btnSepetOnayla.setOnClickListener{
-            val action_sepetonay=
-                SepetimFragmentDirections.actionSepetimFragmentToOdemeAdresFragment()
-            Navigation.findNavController(it).navigate(action_sepetonay)
-        }
+       /* btnSepetOnayla.setOnClickListener{
+
+        }*/
 
 
 
