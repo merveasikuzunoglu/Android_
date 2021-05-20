@@ -2,7 +2,6 @@ package com.merve.bitirme_projesi.view
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -19,14 +18,10 @@ import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.KitapEkleFragmentDirections
 
 import com.merve.bitirme_projesi.R
-import com.merve.bitirme_projesi.viewmodel.KitapEkleViewModel
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_kitap_ekle.*
 import kotlinx.android.synthetic.main.recycler_row_kitaplarim8.*
 import java.io.ByteArrayOutputStream
@@ -34,7 +29,7 @@ import java.io.ByteArrayOutputStream
 
 class KitapEkleFragment : Fragment() {
 
-    private lateinit var viewModel:KitapEkleViewModel
+   // private lateinit var viewModel:KitapEkleViewModel
     lateinit var option : Spinner
     var secilenBitmap: Bitmap?=null
     var secilenGorsel: Uri?=null
@@ -57,7 +52,7 @@ class KitapEkleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel=ViewModelProviders.of(this).get(KitapEkleViewModel::class.java)
+        //viewModel=ViewModelProviders.of(this).get(KitapEkleViewModel::class.java)
 
         //kitap ekleyip menuye geç
         btnKitapEkle.setOnClickListener{

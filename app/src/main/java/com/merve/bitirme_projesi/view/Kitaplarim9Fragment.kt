@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_kitaplarim9.*
 
 class Kitaplarim9Fragment : Fragment() {
     private var kitapId=0
-    private lateinit var viewmodel : Kitaplarim9ViewModel
+    //private lateinit var viewmodel : Kitaplarim9ViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,18 +35,18 @@ class Kitaplarim9Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel=ViewModelProviders.of(this).get(Kitaplarim9ViewModel::class.java)
+       // viewmodel=ViewModelProviders.of(this).get(Kitaplarim9ViewModel::class.java)
 
 
         arguments?.let{
             kitapId= Kitaplarim9FragmentArgs.fromBundle(it).kitapId
         }
 
-        observeLiveData()
+       // observeLiveData()
     }
 
 
-    fun observeLiveData(){
+  /*  fun observeLiveData(){
         viewmodel.tumKitaplarim9LiveData.observe(viewLifecycleOwner, Observer{ kisiselKitap ->
             kisiselKitap?.let {
                 txtK9ad.text=it.kkitapad
@@ -63,7 +63,7 @@ class Kitaplarim9Fragment : Fragment() {
 
         })
 
-    }
+    }*/
 
 
 }

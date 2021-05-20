@@ -68,7 +68,7 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
                 Log.e("error","giris hatalı böyle bir kayıt yok",t)
 
                 view?.let{
-                    val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
+                    val actionb=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
                     Navigation.findNavController(it).navigate(actionb)
                 }
 
