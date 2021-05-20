@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradienty"
     android:layout_height="match_parent"
     tools:context=".view.Kitaplarim8Fragment">
 
@@ -11,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Kitaplarım"
+        android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,12 +21,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewKitaplarim"
-        android:layout_width="417dp"
-        android:layout_height="741dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/edit_text_style"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

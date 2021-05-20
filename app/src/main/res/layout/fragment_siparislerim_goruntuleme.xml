@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCD6C7"
+    android:background="@drawable/gradienty"
     android:orientation="vertical"
     tools:context=".view.SiparislerimGoruntuleme">
 
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="@drawable/edit_text_style"
             android:orientation="vertical">
 
             <LinearLayout
@@ -147,21 +147,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:background="#FFFFFF"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:orientation="vertical"
                 android:paddingLeft="60dp"
+                android:paddingTop="10dp"
                 android:paddingRight="60dp">
 
                 <Button
                     android:id="@+id/button6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
                     android:text="Alışveriş'e Devam Et" />
             </LinearLayout>
 
@@ -177,6 +178,7 @@
                     android:id="@+id/button7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
                     android:text="Sipariş İptal/İade" />
             </LinearLayout>
         </LinearLayout>

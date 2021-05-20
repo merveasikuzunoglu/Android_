@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@drawable/gradienty"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.SepetimFragment">
@@ -17,6 +18,7 @@
         android:text="Sepeti Onayla"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -28,6 +30,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:textSize="20sp"
+        android:background="@drawable/edit_text_style"
         android:text="Sipariş Toplamı : X TL"
         app:layout_constraintBottom_toTopOf="@+id/btnSepetOnayla"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,9 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
+
         android:layout_marginBottom="15dp"
+
         android:textSize="20sp"
         android:text="Kargo Toplamı : X TL"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintBottom_toTopOf="@+id/txtSepetTotalFiyat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -53,8 +59,10 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+
         android:textSize="20sp"
         android:text="Ürün Toplamı : X TL"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintBottom_toTopOf="@+id/txtSepetKargoFiyat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

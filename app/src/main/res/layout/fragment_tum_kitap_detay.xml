@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradienty"
+    android:orientation="vertical"
     tools:context=".view.TumKitapDetayFragment">
 
     <LinearLayout
@@ -490,6 +490,7 @@
                         android:id="@+id/TumDetaySepeteEkle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@drawable/button_style"
                         android:text="Sepete Ekle">
 
                     </Button>
