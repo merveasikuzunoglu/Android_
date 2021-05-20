@@ -19,7 +19,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
-import com.merve.bitirme_projesi.KitapEkleFragmentDirections
+
 
 import com.merve.bitirme_projesi.R
 import kotlinx.android.synthetic.main.fragment_kitap_ekle.*

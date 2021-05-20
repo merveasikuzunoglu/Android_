@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.merve.bitirme_projesi.Kitaplarim9FragmentArgs
+
 
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.viewmodel.Kitaplarim9ViewModel

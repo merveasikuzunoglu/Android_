@@ -5,11 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.merve.bitirme_projesi.Kitaplarim8FragmentDirections
+
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.model.KisiselKitap
 import com.merve.bitirme_projesi.util.gorselIndir2
 import com.merve.bitirme_projesi.util.placeholderYap
+import com.merve.bitirme_projesi.view.Kitaplarim8FragmentDirections
 
 import kotlinx.android.synthetic.main.recycler_row_kitaplarim8.view.*
 

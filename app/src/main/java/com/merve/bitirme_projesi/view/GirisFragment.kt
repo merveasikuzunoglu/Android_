@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.Navigation
-import com.merve.bitirme_projesi.GirisFragmentDirections
+
 import com.merve.bitirme_projesi.ProjectAPI.ProjeApi
 import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 

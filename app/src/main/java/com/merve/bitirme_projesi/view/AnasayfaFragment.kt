@@ -6,14 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.merve.bitirme_projesi.AnasayfaFragmentDirections
-
 import com.merve.bitirme_projesi.R
 import kotlinx.android.synthetic.main.fragment_anasayfa.*
 
 class AnasayfaFragment : Fragment() {
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +31,8 @@ class AnasayfaFragment : Fragment() {
 
         //giris yap buton yönlendirme
         btnAGirisYap.setOnClickListener{
-       val action_giris=AnasayfaFragmentDirections.actionAnasayfaFragment2ToGirisFragment()
-          Navigation.findNavController(it).navigate(action_giris)
+            val action_giris=AnasayfaFragmentDirections.actionAnasayfaFragment2ToGirisFragment()
+            Navigation.findNavController(it).navigate(action_giris)
 
         }
         //kayıt ol buton yönlendirme
