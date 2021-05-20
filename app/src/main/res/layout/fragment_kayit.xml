@@ -99,7 +99,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName2"
+                        android:id="@+id/edtSoyad"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -128,7 +128,7 @@
                     android:paddingBottom="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName3"
+                        android:id="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/edit_text_style"
@@ -148,7 +148,7 @@
                     android:paddingBottom="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName11"
+                        android:id="@+id/edtTel"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/edit_text_style"
@@ -178,7 +178,7 @@
                     android:paddingBottom="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName12"
+                        android:id="@+id/edtSifreKayit1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -198,7 +198,7 @@
                     android:paddingBottom="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName13"
+                        android:id="@+id/edtSifreKayit2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -232,10 +232,10 @@
                         android:paddingBottom="10dp">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName14"
+                            android:id="@+id/edtil"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
+                            android:textAllCaps="true"
                             android:layout_weight="1"
                             android:background="@drawable/edit_text_style"
                             android:ems="10"
@@ -253,10 +253,10 @@
                         android:paddingBottom="10dp">
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName15"
+                            android:id="@+id/edtilce"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
+                            android:textAllCaps="true"
                             android:layout_weight="1"
                             android:background="@drawable/edit_text_style"
                             android:ems="10"
@@ -278,7 +278,7 @@
                     android:paddingBottom="10dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonName16"
+                        android:id="@+id/edtAdres"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
 
@@ -311,7 +311,7 @@
         android:paddingRight="80dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnKayit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_style"

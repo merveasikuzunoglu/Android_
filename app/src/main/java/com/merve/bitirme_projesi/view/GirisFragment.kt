@@ -2,6 +2,7 @@ package com.merve.bitirme_projesi.view
 
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 
 import android.view.View
@@ -14,10 +15,12 @@ import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.model.GirisRequest
 import com.merve.bitirme_projesi.model.GirisResponse
+import com.merve.bitirme_projesi.model.KayitRequest
 import kotlinx.android.synthetic.main.fragment_giris.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.regex.Pattern
 
 class GirisFragment : Fragment(R.layout.fragment_giris) {
 
@@ -30,12 +33,19 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
         btnGirisYap.setOnClickListener{
 
             context?.let{
+               //email boşsa veya istenilen formatta değilse
                 if(editTxtEmail.text.isEmpty()){
-                    Toast.makeText(it,"Email alanı boş bırakılamaz", Toast.LENGTH_LONG).show()
+                    editTxtEmail.error="Email alanı boş bırakılamaz"
+                    return@setOnClickListener
                 }
-                if(editTxtPasswordGiris.text.isEmpty()){
+                else if(editTxtPasswordGiris.text.isEmpty()){
                     Toast.makeText(it,"Şifre alanı boş bırakılamaz", Toast.LENGTH_LONG).show()
                 }
+                else if(!Patterns.EMAIL_ADDRESS.matcher(editTxtEmail.text).matches()){
+                    editTxtEmail.error="Girilen email, email formatına uygun değil"
+                    return@setOnClickListener
+                }
+
                 else{
                     login()
                 }
@@ -47,6 +57,7 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
 
     fun login(){
         val request=GirisRequest()
+        val requestka=KayitRequest()
         request.email=editTxtEmail.text.toString().trim()
         request.password=editTxtPasswordGiris.text.toString().trim()
 
@@ -66,9 +77,15 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
 
             override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
                 Log.e("error","giris hatalı böyle bir kayıt yok",t)
+               //kayit ve giriş emaili aynı fakat giriş yapılamıyor ise
+                if(request.email==requestka.email){
+                    context?.let{
+                        Toast.makeText(it,"Şifre hatalı", Toast.LENGTH_LONG).show()
+                    }
+                }
 
                 view?.let{
-                    val actionb=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
+                    val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
                     Navigation.findNavController(it).navigate(actionb)
                 }
 

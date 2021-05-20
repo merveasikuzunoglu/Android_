@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/anasayfaFragment2"
-        android:name="com.merve.bitirme_projesi.AnasayfaFragment"
+        android:name="com.merve.bitirme_projesi.view.AnasayfaFragment"
         android:label="fragment_anasayfa"
         tools:layout="@layout/fragment_anasayfa" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/girisFragment"
-        android:name="com.merve.bitirme_projesi.GirisFragment"
+        android:name="com.merve.bitirme_projesi.view.GirisFragment"
         android:label="fragment_giris"
         tools:layout="@layout/fragment_giris" >
         <action
@@ -33,15 +33,19 @@
         android:id="@+id/kayitFragment"
         android:name="com.merve.bitirme_projesi.KayitFragment"
         android:label="fragment_kayit"
-        tools:layout="@layout/fragment_kayit" />
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/action_kayitFragment_to_girisFragment"
+            app:destination="@id/girisFragment" />
+    </fragment>
     <activity
         android:id="@+id/menuyeGecisActivity"
-        android:name="com.merve.bitirme_projesi.MenuyeGecisActivity"
+        android:name="com.merve.bitirme_projesi.view.MenuyeGecisActivity"
         android:label="activity_menuye_gecis"
         tools:layout="@layout/activity_menuye_gecis" />
     <fragment
         android:id="@+id/kitapAraFragment"
-        android:name="com.merve.bitirme_projesi.KitapAraFragment"
+        android:name="com.merve.bitirme_projesi.view.KitapAraFragment"
         android:label="fragment_kitap_ara"
         tools:layout="@layout/fragment_kitap_ara" >
         <action
@@ -50,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/kitaplarim8Fragment"
-        android:name="com.merve.bitirme_projesi.Kitaplarim8Fragment"
+        android:name="com.merve.bitirme_projesi.view.Kitaplarim8Fragment"
         android:label="fragment_kitaplarim8"
         tools:layout="@layout/fragment_kitaplarim8" >
         <action
@@ -62,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/kitapEkleFragment"
-        android:name="com.merve.bitirme_projesi.KitapEkleFragment"
+        android:name="com.merve.bitirme_projesi.view.KitapEkleFragment"
         android:label="fragment_kitap_ekle"
         tools:layout="@layout/fragment_kitap_ekle" >
         <action
@@ -71,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/sepetimFragment"
-        android:name="com.merve.bitirme_projesi.SepetimFragment"
+        android:name="com.merve.bitirme_projesi.view.SepetimFragment"
         android:label="fragment_sepetim"
         tools:layout="@layout/fragment_sepetim" >
         <action
@@ -89,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/kitaplarim9Fragment"
-        android:name="com.merve.bitirme_projesi.Kitaplarim9Fragment"
+        android:name="com.merve.bitirme_projesi.view.Kitaplarim9Fragment"
         android:label="fragment_kitaplarim9"
         tools:layout="@layout/fragment_kitaplarim9" >
         <argument
@@ -99,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/kitaplarim10Fragment"
-        android:name="com.merve.bitirme_projesi.Kitaplarim10Fragment"
+        android:name="com.merve.bitirme_projesi.view.Kitaplarim10Fragment"
         android:label="fragment_kitaplarim10"
         tools:layout="@layout/fragment_kitaplarim10" >
         <action
@@ -108,7 +112,7 @@
     </fragment>
     <fragment
         android:id="@+id/odemeAdresFragment"
-        android:name="com.merve.bitirme_projesi.OdemeAdresFragment"
+        android:name="com.merve.bitirme_projesi.view.OdemeAdresFragment"
         android:label="fragment_odeme_adres"
         tools:layout="@layout/fragment_odeme_adres" >
         <action
@@ -117,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/uygulamaBaslangicFragment"
-        android:name="com.merve.bitirme_projesi.UygulamaBaslangicFragment"
+        android:name="com.merve.bitirme_projesi.view.UygulamaBaslangicFragment"
         android:label="fragment_uygulama_baslangic"
         tools:layout="@layout/fragment_uygulama_baslangic" >
         <action
@@ -189,7 +193,11 @@
         android:id="@+id/tumKitapDetayFragment"
         android:name="com.merve.bitirme_projesi.view.TumKitapDetayFragment"
         android:label="fragment_tum_kitap_detay"
-        tools:layout="@layout/fragment_tum_kitap_detay" />
+        tools:layout="@layout/fragment_tum_kitap_detay" >
+        <action
+            android:id="@+id/action_tumKitapDetayFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+    </fragment>
     <fragment
         android:id="@+id/girisBasarisizFragment"
         android:name="com.merve.bitirme_projesi.view.GirisBasarisizFragment"

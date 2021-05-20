@@ -29,10 +29,6 @@ class AdresEkle : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnKayitOl.setOnClickListener{
-           val action_Kayit=AdresEkleDirections.actionAdresEkleToMenuyeGecisActivity()
-            Navigation.findNavController(it).navigate(action_Kayit)
 
-        }
     }
 }
