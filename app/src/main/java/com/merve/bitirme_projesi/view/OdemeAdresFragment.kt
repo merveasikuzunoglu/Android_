@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProviders
 import com.merve.bitirme_projesi.R
-import com.merve.bitirme_projesi.viewmodel.OdemeAdresViewModel
 
 class OdemeAdresFragment : Fragment() {
-    private lateinit var viewmodel :OdemeAdresViewModel
+    //private lateinit var viewmodel :OdemeAdresViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +26,7 @@ class OdemeAdresFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel=ViewModelProviders.of(this).get(OdemeAdresViewModel::class.java)
+     //   viewmodel=ViewModelProviders.of(this).get(OdemeAdresViewModel::class.java)
     }
 
 }

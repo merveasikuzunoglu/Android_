@@ -5,21 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 
 import com.merve.bitirme_projesi.R
 import com.merve.bitirme_projesi.adapter.Kitaplarim8RecyclerAdapter
-import com.merve.bitirme_projesi.model.KisiselKitap
-import com.merve.bitirme_projesi.viewmodel.Kitaplarim8ViewModel
 import kotlinx.android.synthetic.main.fragment_kitaplarim8.*
-import kotlinx.android.synthetic.main.recycler_row_kitaplarim8.*
 
 class Kitaplarim8Fragment : Fragment() {
 
-    private lateinit var viewModel : Kitaplarim8ViewModel
+    //private lateinit var viewModel : Kitaplarim8ViewModel
     private var Kitaplarim8Adapter : Kitaplarim8RecyclerAdapter? = null
 
 
@@ -45,15 +39,15 @@ class Kitaplarim8Fragment : Fragment() {
         recyclerViewKitaplarim.layoutManager = GridLayoutManager(context,2)
         recyclerViewKitaplarim.adapter=Kitaplarim8Adapter
 
-        viewModel=ViewModelProviders.of(this).get(Kitaplarim8ViewModel::class.java)
+        //viewModel=ViewModelProviders.of(this).get(Kitaplarim8ViewModel::class.java)
 
-        observeLiveData()
+        //observeLiveData()
 
 
     }
 
-    fun observeLiveData(){
-        viewModel.kisiselkitaplar.observe(viewLifecycleOwner, Observer { kisiselKitap ->
+    /*fun observeLiveData(){
+      viewModel.kisiselkitaplar.observe(viewLifecycleOwner, Observer { kisiselKitap ->
             kisiselKitap?.let{
                 // eğer kitaplar liste olarak gelebiliyorsa
 
@@ -63,5 +57,5 @@ class Kitaplarim8Fragment : Fragment() {
 
         })
     }
-
+*/
 }
