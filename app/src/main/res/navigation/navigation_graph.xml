@@ -70,11 +70,7 @@
         android:id="@+id/sepetimFragment"
         android:name="com.merve.bitirme_projesi.SepetimFragment"
         android:label="fragment_sepetim"
-        tools:layout="@layout/fragment_sepetim" >
-        <action
-            android:id="@+id/action_sepetimFragment_to_odemeAdresFragment"
-            app:destination="@id/odemeAdresFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_sepetim" />
     <fragment
         android:id="@+id/hesabimFragment"
         android:name="com.merve.bitirme_projesi.HesabimFragment"
@@ -102,15 +98,6 @@
         <action
             android:id="@+id/action_kitaplarim10Fragment_to_menuyeGecisActivity"
             app:destination="@id/menuyeGecisActivity" />
-    </fragment>
-    <fragment
-        android:id="@+id/odemeAdresFragment"
-        android:name="com.merve.bitirme_projesi.OdemeAdresFragment"
-        android:label="fragment_odeme_adres"
-        tools:layout="@layout/fragment_odeme_adres" >
-        <action
-            android:id="@+id/action_odemeAdresFragment_to_odemeKartBilgileri"
-            app:destination="@id/odemeKartBilgileri" />
     </fragment>
     <fragment
         android:id="@+id/uygulamaBaslangicFragment"
