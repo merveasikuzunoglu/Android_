@@ -7,4 +7,5 @@ data class GirisResponse(
     @SerializedName("key")
     @Expose
     var key:String?=null
+
 )

@@ -66,10 +66,11 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 edtAdres.error="Adres bilgisi gerekli"
                 return@setOnClickListener
             }
-          /*  else if(edtSifreKayit1.text!=edtSifreKayit2.text){
+          else if(edtSifreKayit1.text.toString()!=edtSifreKayit2.text.toString()){
                 edtSifreKayit2.error="Şifreler Aynı Değil"
                 return@setOnClickListener
-            }*/
+
+            }
 
             else{
                 register()
@@ -79,7 +80,7 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
 
     fun register(){
         val requestk=KayitRequest()
-        val requestg=GirisRequest()
+        //val requestg=GirisRequest()
         requestk.first_name=edtAd.text.toString().trim()
         requestk.last_name=edtSoyad.text.toString().trim()
         requestk.email=edtEmail.text.toString().trim()
@@ -95,8 +96,8 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
             override fun onResponse(call: Call<KayitResponse>, response: Response<KayitResponse>) {
                 val userk=response.body()
                 val e=userk!!.email
-                val p=userk!!.password
-                Log.e("token","$e email adresi ve $p şifre ile kayit sağlandı")
+
+                Log.e("token"," $e email adresi ile kayit sağlandı")
 
                 view?.let{
                val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
@@ -111,11 +112,11 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
 
                //eğer aynı emaille kayıt yapılmak istenirse
 
-                if(requestk.email==requestg.email){
+                /*if(requestk.email==requestg.email){
                     context?.let{
                         Toast.makeText(it,"Bu email ile oluşturulmuş bir hesap bulunmakta", Toast.LENGTH_LONG).show()
                     }
-                }
+                }*/
 
 
             }

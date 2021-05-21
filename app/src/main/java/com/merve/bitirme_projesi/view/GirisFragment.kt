@@ -39,6 +39,7 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
                     editTxtEmail.error="Email alanı boş bırakılamaz"
                     return@setOnClickListener
                 }
+
                 else if(editTxtPasswordGiris.text.isEmpty()){
                     editTxtPasswordGiris.error="Şifre alanı boş bırakılamaz"
                     return@setOnClickListener
@@ -66,28 +67,40 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
         val retro=RetrofitProvider().downloadData().create(ProjeApi::class.java)
         retro.login(request).enqueue(object : Callback<GirisResponse>{
             override fun onResponse(call: Call<GirisResponse>, response: Response<GirisResponse>) {
-                val user=response.body()
-                val a=user!!.key
-                Log.e("token","giris yapılabilir  $a")
+                if(response.isSuccessful){
+                    val user=response.body()
+                    val a= user?.key
 
-                view?.let{
-                   val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
-                    Navigation.findNavController(it).navigate(actiong)
+                    Log.e("token","giris yapılabilir $a" )
 
+                    view?.let{
+                        val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
+                        Navigation.findNavController(it).navigate(actiong)
+
+                    }}
+
+                else{
+                    //şifre veya email hatalı ise
+            if(request.email!=editTxtEmail.text.toString().trim()){
+                context?.let{
+                    Toast.makeText(it,"Girdiğiniz emaille oluşmuş hesap bulunmamakta", Toast.LENGTH_LONG).show()
                 }
-
+                /*  view?.let{
+                        val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
+                        Navigation.findNavController(it).navigate(actionb)
+                    }
+                    */
             }
+             if( request.password!=editTxtPasswordGiris.text.toString().trim()){
+                 context?.let{
+                     Toast.makeText(it,"Girdiğiniz şifre hatalı", Toast.LENGTH_LONG).show()
+                 }
+            }
+                    }
+                }
 
             override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
-                Log.e("error","giris hatalı böyle bir kayıt yok",t)
-
-
-                view?.let{
-                    val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
-                    Navigation.findNavController(it).navigate(actionb)
-                }
-
-
+                Log.e("error","Siteye istek gönderilemedi",t)
             }
 
         })
