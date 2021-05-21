@@ -71,8 +71,9 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
                 Log.e("token","giris yapılabilir  $a")
 
                 view?.let{
-                    val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
+                   val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
                     Navigation.findNavController(it).navigate(actiong)
+
                 }
 
             }

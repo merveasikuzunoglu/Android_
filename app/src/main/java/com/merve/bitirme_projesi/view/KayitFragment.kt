@@ -66,10 +66,10 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 edtAdres.error="Adres bilgisi gerekli"
                 return@setOnClickListener
             }
-            else if(edtSifreKayit1.text!=edtSifreKayit2.text){
+          /*  else if(edtSifreKayit1.text!=edtSifreKayit2.text){
                 edtSifreKayit2.error="Şifreler Aynı Değil"
                 return@setOnClickListener
-            }
+            }*/
 
             else{
                 register()
