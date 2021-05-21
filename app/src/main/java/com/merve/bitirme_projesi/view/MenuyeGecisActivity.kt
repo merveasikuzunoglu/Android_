@@ -74,8 +74,8 @@ class MenuyeGecisActivity : AppCompatActivity() ,NavigationView.OnNavigationItem
 
 
             R.id.SiparislerimFragment -> {
-                setToolBarTitle("Sepetim")
-               // changeFragment(SiparislerimFragment())
+                setToolBarTitle("Siparislerim")
+               changeFragment(SiparislerimGoruntuleme())
 
             }
 
