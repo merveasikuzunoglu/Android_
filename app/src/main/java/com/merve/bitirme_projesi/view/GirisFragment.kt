@@ -62,41 +62,46 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
         val request=GirisRequest()
         request.email=editTxtEmail.text.toString().trim()
         request.password=editTxtPasswordGiris.text.toString().trim()
-
-
         val retro=RetrofitProvider().downloadData().create(ProjeApi::class.java)
         retro.login(request).enqueue(object : Callback<GirisResponse>{
             override fun onResponse(call: Call<GirisResponse>, response: Response<GirisResponse>) {
                 if(response.isSuccessful){
                     val user=response.body()
                     val a= user?.key
-
                     Log.e("token","giris yapılabilir $a" )
-
                     view?.let{
                         val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
-                        Navigation.findNavController(it).navigate(actiong)
-
-                    }}
-
+                        Navigation.findNavController(it).navigate(actiong) }}
                 else{
                     //şifre veya email hatalı ise
-            if(request.email!=editTxtEmail.text.toString().trim()){
-                context?.let{
-                    Toast.makeText(it,"Girdiğiniz emaille oluşmuş hesap bulunmamakta", Toast.LENGTH_LONG).show()
+            if(request.email==editTxtEmail.text.toString()){
+                if(request.password!=editTxtPasswordGiris.text.toString()){
+                    Log.e("error","şifre hatalı " )
                 }
+            if(request.email!=editTxtEmail.text.toString())  {
+                Log.e("error","email hatalı " )
+
+            }
+                //Log.e("email","email hatalı " )
+            /*context?.let{
+                    Toast.makeText(it,"Girdiğiniz emaille oluşmuş hesap bulunmamakta", Toast.LENGTH_LONG).show()
+                }*/
                 /*  view?.let{
                         val actionb=GirisFragmentDirections.actionGirisFragmentToGirisBasarisizFragment()
                         Navigation.findNavController(it).navigate(actionb)
                     }
                     */
             }
-             if( request.password!=editTxtPasswordGiris.text.toString().trim()){
-                 context?.let{
+            /* if( request.password!=editTxtPasswordGiris.text.toString()){
+                 Log.e("email","şifre hatalı " )}*/
+
+
+
+             /* context?.let{
                      Toast.makeText(it,"Girdiğiniz şifre hatalı", Toast.LENGTH_LONG).show()
-                 }
+                 }*/
             }
-                    }
+
                 }
 
             override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
