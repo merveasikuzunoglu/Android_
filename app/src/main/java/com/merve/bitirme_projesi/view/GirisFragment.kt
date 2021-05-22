@@ -13,11 +13,10 @@ import com.merve.bitirme_projesi.ProjectAPI.ProjeApi
 import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 
 import com.merve.bitirme_projesi.R
-import com.merve.bitirme_projesi.model.GirisRequest
-import com.merve.bitirme_projesi.model.GirisResponse
-import com.merve.bitirme_projesi.model.KayitRequest
+import com.merve.bitirme_projesi.model.*
 import kotlinx.android.synthetic.main.fragment_giris.*
 import kotlinx.android.synthetic.main.fragment_kayit.*
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,60 +27,133 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAction()
-
     }
     fun initAction(){
+
+        val responsefailsifre=GirisFailResponse(listOf("Verilen bilgiler ile giriş sağlanamadı."))
+        val responsefailemail=GirisFailEmailResponse(listOf("Geçerli bir e-posta adresi girin."))
+
         btnGirisYap.setOnClickListener{
+            //email boşsa veya istenilen formatta değilse
 
-            context?.let{
-               //email boşsa veya istenilen formatta değilse
-                if(editTxtEmail.text.isEmpty()){
-                    editTxtEmail.error="Email alanı boş bırakılamaz"
-                    return@setOnClickListener
-                }
+            if(editTxtEmail.text.isEmpty()){
+                editTxtEmail.error="Email alanı boş bırakılamaz"
+                return@setOnClickListener
+            }
+            else if(editTxtPasswordGiris.text.isEmpty()){
+                editTxtPasswordGiris.error="Şifre alanı boş bırakılamaz"
+                return@setOnClickListener
+            }
+            else if(!Patterns.EMAIL_ADDRESS.matcher(editTxtEmail.text).matches()){
+                editTxtEmail.error="Girilen email, email formatına uygun değil"
+                return@setOnClickListener
+            }
+           else{
 
-                else if(editTxtPasswordGiris.text.isEmpty()){
-                    editTxtPasswordGiris.error="Şifre alanı boş bırakılamaz"
-                    return@setOnClickListener
+                if(responsefailsifre.non_field_errors.equals(responsefailsifre)){
+                    failsifre()
                 }
-                else if(!Patterns.EMAIL_ADDRESS.matcher(editTxtEmail.text).matches()){
-                    editTxtEmail.error="Girilen email, email formatına uygun değil"
-                    return@setOnClickListener
+                if(responsefailemail.email.equals(responsefailemail)){
+                    failemail()
                 }
-
                 else{
                     login()
                 }
+
             }
+
 
 
         }
     }
 
+    val request=GirisRequest()
+    val retro=RetrofitProvider().downloadData().create(ProjeApi::class.java)
+
     fun login(){
-        val request=GirisRequest()
         request.email=editTxtEmail.text.toString().trim()
         request.password=editTxtPasswordGiris.text.toString().trim()
-        val retro=RetrofitProvider().downloadData().create(ProjeApi::class.java)
         retro.login(request).enqueue(object : Callback<GirisResponse>{
             override fun onResponse(call: Call<GirisResponse>, response: Response<GirisResponse>) {
-                if(response.isSuccessful){
-                    val user=response.body()
-                    val a= user?.key
-                    Log.e("token","giris yapılabilir $a" )
-                    view?.let{
-                        val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
-                        Navigation.findNavController(it).navigate(actiong) }}
-                else{
-                    //şifre veya email hatalı ise
-            if(request.email==editTxtEmail.text.toString()){
-                if(request.password!=editTxtPasswordGiris.text.toString()){
-                    Log.e("error","şifre hatalı " )
+
+     if(response.isSuccessful){
+
+         val user=response.body()
+         val a=user?.key
+         Log.e("token","giris yapılabilir $a" )
+         view?.let{
+             val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
+             Navigation.findNavController(it).navigate(actiong) }
+     }
+            }
+            override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
+                Log.e("error","Siteye istek gönderilemedi",t)
+            } } )
+    }
+
+    fun failsifre(){
+        request.email=editTxtEmail.text.toString().trim()
+        request.password=editTxtPasswordGiris.text.toString().trim()
+        retro.loginfailsifre(request).enqueue(object : Callback<GirisFailResponse> {
+            override fun onResponse(
+                call: Call<GirisFailResponse>, response: Response<GirisFailResponse>
+            ) {
+                if (response.isSuccessful) {
+                    val userfail = response.body()
+                    val x = listOf(userfail?.non_field_errors)
+
+                    Log.e("errorsifre", "sifre hatalı $x")
                 }
-            if(request.email!=editTxtEmail.text.toString())  {
-                Log.e("error","email hatalı " )
 
             }
+
+            override fun onFailure(call: Call<GirisFailResponse>, t: Throwable) {
+                Log.e("error", "Siteye istek gönderilemedi", t)
+            }
+
+        })
+    }
+
+    fun failemail(){
+        request.email=editTxtEmail.text.toString().trim()
+        request.password=editTxtPasswordGiris.text.toString().trim()
+        retro.loginfailemail(request).enqueue(object:Callback<GirisFailEmailResponse>{
+            override fun onResponse(call: Call<GirisFailEmailResponse>, response: Response<GirisFailEmailResponse>
+            ) {
+                if(response.isSuccessful){
+                    val useremailf=response.body()
+                    val y= useremailf?.email
+                    Log.e("erroremail","email hatalı $y" )
+
+                }
+            }
+
+            override fun onFailure(call: Call<GirisFailEmailResponse>, t: Throwable) {
+                Log.e("error","Siteye istek gönderilemedi",t)
+            }
+
+        }
+        )
+
+    }
+
+
+}
+
+
+
+
+/*
+    else{
+        //şifre veya email hatalı ise
+if(request.email==editTxtEmail.text.toString()){
+    if(request.password!=editTxtPasswordGiris.text.toString()){
+        Log.e("error","şifre hatalı " )
+    }
+if(request.email!=editTxtEmail.text.toString())  {
+    Log.e("error","email hatalı " )
+
+}*/
                 //Log.e("email","email hatalı " )
             /*context?.let{
                     Toast.makeText(it,"Girdiğiniz emaille oluşmuş hesap bulunmamakta", Toast.LENGTH_LONG).show()
@@ -91,28 +163,22 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
                         Navigation.findNavController(it).navigate(actionb)
                     }
                     */
-            }
-            /* if( request.password!=editTxtPasswordGiris.text.toString()){
-                 Log.e("email","şifre hatalı " )}*/
+
+
 
 
 
              /* context?.let{
                      Toast.makeText(it,"Girdiğiniz şifre hatalı", Toast.LENGTH_LONG).show()
                  }*/
-            }
-
-                }
-
-            override fun onFailure(call: Call<GirisResponse>, t: Throwable) {
-                Log.e("error","Siteye istek gönderilemedi",t)
-            }
-
-        })
 
 
 
-    }
 
 
-}
+
+
+
+
+
+
