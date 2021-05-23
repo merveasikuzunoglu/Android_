@@ -76,9 +76,9 @@ class KitapEkleFragment : Fragment() {
         btnFotografYükle.setOnClickListener{
             gorselSec(it)
         }
-        spinnerKEkargo.setOnClickListener{
+/*        spinnerKEkargo.setOnClickListener{
             spinnerKargoicin(it)
-        }
+        }*/
 
     }
 
