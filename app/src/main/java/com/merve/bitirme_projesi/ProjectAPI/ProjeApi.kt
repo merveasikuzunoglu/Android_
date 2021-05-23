@@ -9,15 +9,7 @@ interface ProjeApi {
     @POST("kullanici/api/api/rest-auth/login/")
     fun login( @Body loginrequest: GirisRequest ): Call<GirisResponse>
 
-    @POST("kullanici/api/api/rest-auth/login/")
-    fun loginfailsifre( @Body loginrequest: GirisRequest ): Call<GirisFailResponse>
-
-    @POST("kullanici/api/api/rest-auth/login/")
-    fun loginfailemail( @Body loginrequest: GirisRequest ): Call<GirisFailEmailResponse>
-
     @POST("kullanici/api/users/")
     fun register( @Body registerrequest: KayitRequest ): Call<KayitResponse>
-
-
 
 }

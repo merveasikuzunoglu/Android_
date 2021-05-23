@@ -7,16 +7,8 @@ import org.json.JSONArray
 data class GirisResponse(
     @SerializedName("key")
     @Expose
-    var key:String?=null
+    var key:String?=null,
 
-  /*  //sifre hatalı ise
-    @SerializedName("non_field_errors")
-    @Expose
-    var non_field_errors:JSONArray,
 
-    //email hatalı ise
-    @SerializedName("email")
-
-    var email:JSONArray*/
 )
 
