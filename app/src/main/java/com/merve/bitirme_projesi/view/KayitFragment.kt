@@ -1,6 +1,10 @@
 package com.merve.bitirme_projesi
 
+import android.media.MediaCodec
+import android.os.Build
 import android.os.Bundle
+import android.text.Editable
+import android.text.InputFilter
 import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -8,17 +12,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.ProjectAPI.ProjeApi
 import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 import com.merve.bitirme_projesi.model.GirisRequest
 import com.merve.bitirme_projesi.model.KayitRequest
 import com.merve.bitirme_projesi.model.KayitResponse
+import kotlinx.android.synthetic.main.fragment_giris.*
 
 import kotlinx.android.synthetic.main.fragment_kayit.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 
 class KayitFragment : Fragment(R.layout.fragment_kayit) {
@@ -39,7 +46,11 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 return@setOnClickListener
             }
             else if(edtEmail.text.isEmpty()){
-                edtEmail.error="Mail gerekli"
+                edtEmail.error="Email gerekli"
+                return@setOnClickListener
+            }
+            else if(!Patterns.EMAIL_ADDRESS.matcher(editTxtEmail.text).matches()){
+                editTxtEmail.error="Girilen email, email formatına uygun değil"
                 return@setOnClickListener
             }
             else if(edtTel.text.isEmpty()){
@@ -54,6 +65,15 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 edtSifreKayit2.error="Şifre yeniden gerekli"
                 return@setOnClickListener
             }
+
+
+
+           // pattern.CASE_INSENSITIVE_ORDER(edtil.text).matches()
+            //val passwordpattern= MediaCodec.CryptoInfo.Pattern.compile()
+          /*  else if(!Patterns..matcher(editTxtEmail.text).matches()){
+                editTxtEmail.error="Girilen email, email formatına uygun değil"
+                return@setOnClickListener
+            }*/
             else if(edtil.text.isEmpty()){
                 edtil.error="İl bilgisi gerekli"
                 return@setOnClickListener
@@ -78,37 +98,43 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
         }
     }
 
+
     fun register(){
+
         val requestk=KayitRequest()
-        //val requestg=GirisRequest()
+     
         requestk.first_name=edtAd.text.toString().trim()
         requestk.last_name=edtSoyad.text.toString().trim()
         requestk.email=edtEmail.text.toString().trim()
         requestk.phone=edtTel.text.toString().trim()
         requestk.password=edtSifreKayit1.text.toString().trim()
         requestk.password=edtSifreKayit2.text.toString().trim()
-        requestk.il=edtil.text.toString().trim()
-        requestk.ilce=edtilce.text.toString().trim()
+        requestk.il= (edtil.text.filters + InputFilter.AllCaps()).toString().trim()
+        requestk.ilce=(edtilce.text.filters+InputFilter.AllCaps()).toString().trim()
         requestk.adres=edtAdres.text.toString().trim()
 
         val retrok=RetrofitProvider().downloadData().create(ProjeApi::class.java)
         retrok.register(requestk).enqueue(object: Callback<KayitResponse>{
             override fun onResponse(call: Call<KayitResponse>, response: Response<KayitResponse>) {
-                val userk=response.body()
-                val e=userk!!.email
+                if(response.isSuccessful){
+                    val userk=response.body()
+                    val e=userk!!.email
 
-                Log.e("token"," $e email adresi ile kayit sağlandı")
+                    Log.e("token"," $e email adresi ile kayit sağlandı")
 
-                view?.let{
-               val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
-                    Navigation.findNavController(it).navigate(actionk)
+                 /*   view?.let{
+                        val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
+                        Navigation.findNavController(it).navigate(actionk)
+
+                    }*/
 
                 }
+
 
             }
 
             override fun onFailure(call: Call<KayitResponse>, t: Throwable) {
-                Log.e("error","Kayıt olma işlemi yapılamadı",t)
+                Log.e("error","Siteye istek gönderilemedi",t)
 
                //eğer aynı emaille kayıt yapılmak istenirse
 

@@ -240,7 +240,7 @@
                             android:background="@drawable/edit_text_style"
                             android:ems="10"
                             android:hint="İl:"
-                            android:inputType="textPersonName"
+                            android:inputType="textCapCharacters"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -261,7 +261,7 @@
                             android:background="@drawable/edit_text_style"
                             android:ems="10"
                             android:hint="İlçe:"
-                            android:inputType="textPersonName"
+                            android:inputType="textCapCharacters"
                             android:paddingRight="10dp"
                             android:paddingBottom="10dp"
                             android:textAlignment="center" />
@@ -281,7 +281,6 @@
                         android:id="@+id/edtAdres"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_style"
                         android:ems="10"
