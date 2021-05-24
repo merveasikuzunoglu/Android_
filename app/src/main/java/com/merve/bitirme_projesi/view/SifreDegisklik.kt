@@ -5,23 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.R
+import kotlinx.android.synthetic.main.fragment_sifre_degisklik.*
 
 
-class SifreDegisklik : Fragment() {
+class SifreDegisklik : Fragment(R.layout.fragment_sifre_degisklik) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        btnSifreDegis.setOnClickListener{
+           val actionsifredegis=SifreDegisklikDirections.actionSifreDegisklikToAnasayfaFragment2()
+            Navigation.findNavController(it).navigate(actionsifredegis)
+        }
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sifre_degisklik, container, false)
-    }
-
 
 }

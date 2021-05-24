@@ -14,19 +14,8 @@ import com.merve.bitirme_projesi.viewmodel.Kitaplarim10ViewModel
 import kotlinx.android.synthetic.main.fragment_kitaplarim10.*
 
 
-class Kitaplarim10Fragment : Fragment() {
+class Kitaplarim10Fragment : Fragment(R.layout.fragment_kitaplarim10) {
     private lateinit var viewmodel :Kitaplarim10ViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kitaplarim10, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,9 +26,9 @@ class Kitaplarim10Fragment : Fragment() {
 
         //kitap bilgisi düzenledikten sonra menuye geç
         btnK10kaydet.setOnClickListener{
-            val action_kitapduzenleyipkaydet=
-                 Kitaplarim10FragmentDirections.actionKitaplarim10FragmentToMenuyeGecisActivity()
-            Navigation.findNavController(it).navigate(action_kitapduzenleyipkaydet)
+                val kitap10=Kitaplarim10FragmentDirections.actionKitaplarim10FragmentToKitaplarim8Fragment()
+            Navigation.findNavController(it).navigate(kitap10)
+
         }
 
 

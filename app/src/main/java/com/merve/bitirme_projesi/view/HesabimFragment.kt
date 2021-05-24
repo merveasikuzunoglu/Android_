@@ -8,29 +8,13 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_hesabim.*
 
-class HesabimFragment : Fragment() {
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hesabim, container, false)
-    }
+class HesabimFragment : Fragment(R.layout.fragment_hesabim) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         btnHesabimDuzenle.setOnClickListener{
-            val action_hesabimduzenle=HesabimFragmentDirections.actionHesabimFragmentToMenuyeGecisActivity2()
+            val action_hesabimduzenle=HesabimFragmentDirections.actionHesabimFragmentToUyeBilgGuncelle()
             Navigation.findNavController(it).navigate(action_hesabimduzenle)
         }
 

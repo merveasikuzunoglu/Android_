@@ -176,7 +176,7 @@ class KitapEkleFragment : Fragment() {
 
 
         view.let {
-            val action_menuyegec= KitapEkleFragmentDirections.actionKitapEkleFragmentToMenuyeGecisActivity()
+            val action_menuyegec= KitapEkleFragmentDirections.actionKitapEkleFragmentToKitaplarim8Fragment()
             Navigation.findNavController(it).navigate(action_menuyegec)
         }
     }

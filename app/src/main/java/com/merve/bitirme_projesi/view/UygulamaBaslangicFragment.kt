@@ -11,22 +11,7 @@ import com.merve.bitirme_projesi.R
 
 import kotlinx.android.synthetic.main.fragment_uygulama_baslangic.*
 
-class UygulamaBaslangicFragment : Fragment() {
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_uygulama_baslangic, container, false)
-    }
-
+class UygulamaBaslangicFragment : Fragment(R.layout.fragment_uygulama_baslangic) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

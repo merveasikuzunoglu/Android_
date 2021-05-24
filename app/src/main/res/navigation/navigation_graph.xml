@@ -70,8 +70,8 @@
         android:label="fragment_kitap_ekle"
         tools:layout="@layout/fragment_kitap_ekle" >
         <action
-            android:id="@+id/action_kitapEkleFragment_to_menuyeGecisActivity"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_kitapEkleFragment_to_kitaplarim8Fragment"
+            app:destination="@id/kitaplarim8Fragment" />
     </fragment>
     <fragment
         android:id="@+id/sepetimFragment"
@@ -79,6 +79,9 @@
         android:label="fragment_sepetim"
         tools:layout="@layout/fragment_sepetim" >
 
+        <action
+            android:id="@+id/action_sepetimFragment_to_odemeKartBilgileri"
+            app:destination="@id/odemeKartBilgileri" />
     </fragment>
     <fragment
         android:id="@+id/hesabimFragment"
@@ -86,8 +89,8 @@
         android:label="fragment_hesabim"
         tools:layout="@layout/fragment_hesabim" >
         <action
-            android:id="@+id/action_hesabimFragment_to_menuyeGecisActivity2"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_hesabimFragment_to_uyeBilgGuncelle"
+            app:destination="@id/uyeBilgGuncelle" />
     </fragment>
     <fragment
         android:id="@+id/kitaplarim9Fragment"
@@ -105,8 +108,8 @@
         android:label="fragment_kitaplarim10"
         tools:layout="@layout/fragment_kitaplarim10" >
         <action
-            android:id="@+id/action_kitaplarim10Fragment_to_menuyeGecisActivity"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_kitaplarim10Fragment_to_kitaplarim8Fragment"
+            app:destination="@id/kitaplarim8Fragment" />
     </fragment>
     <fragment
         android:id="@+id/uygulamaBaslangicFragment"
@@ -126,8 +129,8 @@
             android:id="@+id/action_ayarlar_to_uyeBilgGuncelle"
             app:destination="@id/uyeBilgGuncelle" />
         <action
-            android:id="@+id/action_ayarlar_to_menuyeGecisActivity2"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_ayarlar_to_sifreDegisklik"
+            app:destination="@id/sifreDegisklik" />
     </fragment>
     <fragment
         android:id="@+id/adresEkle"
@@ -163,8 +166,8 @@
         android:label="fragment_sifre_degisklik"
         tools:layout="@layout/fragment_sifre_degisklik" >
         <action
-            android:id="@+id/action_sifreDegisklik_to_ayarlar"
-            app:destination="@id/ayarlar" />
+            android:id="@+id/action_sifreDegisklik_to_anasayfaFragment2"
+            app:destination="@id/anasayfaFragment2" />
     </fragment>
     <fragment
         android:id="@+id/tumKitaplarFragment"
