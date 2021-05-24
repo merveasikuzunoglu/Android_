@@ -61,7 +61,6 @@
             android:layout_width="344dp"
             android:layout_height="312dp"
             android:layout_weight="1"
-            android:background="@drawable/gradienty"
             android:orientation="vertical">
 
 
@@ -69,7 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
 
                 <EditText
                     android:id="@+id/editTxtEmail"
@@ -79,6 +79,7 @@
                     android:ems="10"
                     android:hint="E-Mail(Example@gmail.com)"
                     android:inputType="textEmailAddress"
+                    android:padding="15dp"
                     android:textAlignment="center" />
             </LinearLayout>
 
@@ -87,7 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
 
                 <EditText
                     android:id="@+id/editTxtPasswordGiris"
@@ -104,33 +106,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="365dp"
+            android:layout_width="352dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:background="#FFFFFF"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="35dp"
+            android:paddingTop="45dp"
+            android:paddingRight="35dp">
 
-
-            <LinearLayout
-                android:layout_width="351dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/gradienty"
-                android:orientation="vertical"
-                android:paddingLeft="60dp"
-                android:paddingTop="40dp"
-                android:paddingRight="60dp">
-
-                <Button
-                    android:id="@+id/btnGirisYap"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_style"
-                    android:text="Giriş Yap"
-                    android:textSize="18sp" />
-
-
-            </LinearLayout>
+            <Button
+                android:id="@+id/btnGirisYap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:text="Giriş Yap"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 

@@ -3,33 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/gradienty"
     android:layout_height="match_parent"
+    android:background="@drawable/gradienty"
     tools:context=".view.Kitaplarim8Fragment">
 
     <TextView
         android:id="@+id/textViewKitaplarim"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="393dp"
+        android:layout_height="756dp"
         android:text="Kitaplarım"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewKitaplarim"
-        android:layout_width="350dp"
-        android:layout_height="650dp"
-        android:layout_marginTop="76dp"
-        android:background="@drawable/edit_text_style"
+        android:layout_width="342dp"
+        android:layout_height="611dp"
 
+        android:background="@drawable/edit_text_style"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/textViewKitaplarim"
+        app:layout_constraintTop_toTopOf="@+id/textViewKitaplarim"
+        app:layout_constraintVertical_bias="0.77" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

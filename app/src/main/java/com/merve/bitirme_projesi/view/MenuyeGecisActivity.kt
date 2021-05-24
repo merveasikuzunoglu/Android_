@@ -1,5 +1,6 @@
 package com.merve.bitirme_projesi.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -103,6 +104,10 @@ class MenuyeGecisActivity : AppCompatActivity() ,NavigationView.OnNavigationItem
             }
             R.id.CikisFragment -> {
                 setToolBarTitle("Çıkış Yap")
+                //BURDA KULLANICIDAN DA CIKIS YAPMAK GEREK ONU TEKRAR ARASTIRICAM
+                finish()
+
+               //val intent =Intent(this,UygulamaBaslangicFragmentDirections)
                 //changeFragment(CikisFragment())
 
             }

@@ -1,4 +1,4 @@
-package com.merve.bitirme_projesi.view
+ package com.merve.bitirme_projesi.view
 
 import android.os.Bundle
 import android.util.Log
@@ -67,7 +67,7 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
         retro.login(request).enqueue(object : Callback<GirisResponse>{
             override fun onResponse(call: Call<GirisResponse>, response: Response<GirisResponse>) {
                 val user=response.body()
-                val a=user!!.key
+                val a=user?.key
                 Log.e("token","giris yapılabilir  $a")
 
                 view?.let{

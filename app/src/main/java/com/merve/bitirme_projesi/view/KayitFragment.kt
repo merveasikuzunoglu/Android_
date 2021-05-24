@@ -50,10 +50,10 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 edtSifreKayit1.error="Şifre gerekli"
                 return@setOnClickListener
             }
-            else if(edtSifreKayit2.text.isEmpty()){
-                edtSifreKayit2.error="Şifre yeniden gerekli"
-                return@setOnClickListener
-            }
+           // else if(edtSifreKayit2.text.isEmpty()){
+           //     edtSifreKayit2.error="Şifre yeniden gerekli"
+           //     return@setOnClickListener
+           // }
             else if(edtil.text.isEmpty()){
                 edtil.error="İl bilgisi gerekli"
                 return@setOnClickListener
@@ -85,7 +85,7 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
         requestk.email=edtEmail.text.toString().trim()
         requestk.phone=edtTel.text.toString().trim()
         requestk.password=edtSifreKayit1.text.toString().trim()
-        requestk.password=edtSifreKayit2.text.toString().trim()
+        //requestk.password=edtSifreKayit2.text.toString().trim()
         requestk.il=edtil.text.toString().trim()
         requestk.ilce=edtilce.text.toString().trim()
         requestk.adres=edtAdres.text.toString().trim()

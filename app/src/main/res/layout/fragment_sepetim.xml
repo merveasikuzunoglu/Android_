@@ -29,9 +29,10 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:textSize="20sp"
         android:background="@drawable/edit_text_style"
         android:text="Sipariş Toplamı : X TL"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSepetOnayla"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,9 +46,10 @@
 
         android:layout_marginBottom="15dp"
 
-        android:textSize="20sp"
-        android:text="Kargo Toplamı : X TL"
         android:background="@drawable/edit_text_style"
+        android:text="Kargo Toplamı : X TL"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txtSepetTotalFiyat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -60,21 +62,19 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
 
-        android:textSize="20sp"
-        android:text="Ürün Toplamı : X TL"
         android:background="@drawable/edit_text_style"
+        android:text="Ürün Toplamı : X TL"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txtSepetKargoFiyat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/SepetRecyclerView"
-        android:layout_width="399dp"
-        android:layout_height="538dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="349dp"
+        android:layout_height="443dp"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintBottom_toTopOf="@+id/txtSepetKitapFiyat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"

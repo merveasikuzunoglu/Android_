@@ -116,6 +116,9 @@
         <action
             android:id="@+id/action_uygulamaBaslangicFragment_to_anasayfaFragment2"
             app:destination="@id/anasayfaFragment2" />
+        <action
+            android:id="@+id/action_uygulamaBaslangicFragment_to_menuyeGecisActivity"
+            app:destination="@id/menuyeGecisActivity" />
     </fragment>
     <fragment
         android:id="@+id/ayarlar"
@@ -123,11 +126,17 @@
         android:label="fragment_ayarlar"
         tools:layout="@layout/fragment_ayarlar" >
         <action
+            android:id="@+id/action_ayarlar_to_menuyeGecisActivity2"
+            app:destination="@id/menuyeGecisActivity" />
+        <action
             android:id="@+id/action_ayarlar_to_uyeBilgGuncelle"
             app:destination="@id/uyeBilgGuncelle" />
         <action
-            android:id="@+id/action_ayarlar_to_menuyeGecisActivity2"
-            app:destination="@id/menuyeGecisActivity" />
+            android:id="@+id/action_ayarlar_to_sifreDegisklik"
+            app:destination="@id/sifreDegisklik" />
+        <action
+            android:id="@+id/action_ayarlar_to_odemeKartBilgileri"
+            app:destination="@id/odemeKartBilgileri" />
     </fragment>
     <fragment
         android:id="@+id/adresEkle"
@@ -161,11 +170,7 @@
         android:id="@+id/sifreDegisklik"
         android:name="com.merve.bitirme_projesi.view.SifreDegisklik"
         android:label="fragment_sifre_degisklik"
-        tools:layout="@layout/fragment_sifre_degisklik" >
-        <action
-            android:id="@+id/action_sifreDegisklik_to_ayarlar"
-            app:destination="@id/ayarlar" />
-    </fragment>
+        tools:layout="@layout/fragment_sifre_degisklik" />
     <fragment
         android:id="@+id/tumKitaplarFragment"
         android:name="com.merve.bitirme_projesi.view.TumKitaplarFragment"
@@ -195,5 +200,8 @@
         <action
             android:id="@+id/action_girisBasarisizFragment_to_kayitFragment"
             app:destination="@id/kayitFragment" />
+        <action
+            android:id="@+id/action_girisBasarisizFragment_to_girisFragment"
+            app:destination="@id/girisFragment" />
     </fragment>
 </navigation>

@@ -107,7 +107,7 @@
                             android:id="@+id/textView9"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Bu Bilgiler Sisteme Girişe İzin Vermiyor..               Kayıtlı Değilsen Devam Etmek İçin Lütfen Kayıt Ol"
+                            android:text="Bu Bilgilerde bir yanlışlık var...              Eposta veya Şifre hatalı olabilir yada Kayıtlı Değilsen Devam Etmek İçin Lütfen Kayıt Ol"
                             android:textSize="30sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -125,17 +125,46 @@
         android:layout_width="match_parent"
         android:layout_height="224dp"
         android:layout_weight="0.5"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnBasarisizKayit"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="65dp"
-            android:background="@drawable/button_style"
-            android:text="Kayıt Ol"
-            android:textSize="24sp" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/btnBasarisizKayit"
+                android:layout_width="160dp"
+                android:layout_height="91dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/button_style"
+                android:drawableLeft="@drawable/kayit"
+                android:text="Kayıt Ol"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBasarisizGiris"
+                android:layout_width="160dp"
+                android:layout_height="91dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/button_style"
+                android:drawableLeft="@drawable/login"
+                android:text="Giriş"
+                android:textSize="24sp" />
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

@@ -143,8 +143,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="Yayınevi"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:inputType="textPersonName" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -179,16 +178,41 @@
                     android:layout_weight="0.1"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtKEbaskiyili"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Baskı Yılı"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTxtKEbaskiyili"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Baskı Yılı"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTxtKEsayfasayisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Sayfa Sayısı"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -230,15 +254,13 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTxtKEsayfasayisi"
+                        android:id="@+id/editTxtKEisbn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Sayfa Sayısı"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:hint="ISBN no"
+                        android:inputType="textPersonName" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -274,14 +296,14 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTxtKEisbn"
+                        android:id="@+id/editTxtKEthg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="ISBN no"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:hint="THG no"
+                        android:inputType="textPersonName" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -313,31 +335,28 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.1"
                     android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.2"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtKEthg"
+                    <Spinner
+                        android:id="@+id/spinnerKEkargo"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="53dp"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="THG no"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:entries="@array/kargolist" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="1.1"
                     android:orientation="horizontal"></LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -365,13 +384,14 @@
                     android:layout_weight="0.1"
                     android:orientation="horizontal">
 
-                    <Spinner
-                        android:id="@+id/spinnerKEkargo"
-                        android:entries="@array/kargolist"
-                        android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="1" />
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Satmak istenilen Fiyat:X TL"
+                        android:inputType="textPersonName" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -398,13 +418,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.4"
                 android:orientation="horizontal"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.1"
+                android:layout_weight="0.2"
                 android:orientation="horizontal">
 
                 <EditText
@@ -415,14 +435,13 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Açıklama"
-                    android:inputType="textPersonName"
-                    android:text="Name" />
+                    android:inputType="textPersonName" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.4"
                 android:orientation="horizontal"></LinearLayout>
         </LinearLayout>
 
@@ -449,21 +468,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.6"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
 
                     <Button
                         android:id="@+id/btnFotografYükle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:background="@drawable/button_style"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
                         android:text="Fotoğraf Yükle"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -472,14 +489,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <Button
+                        android:id="@+id/btnKitapEkle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_style"
+                        android:text="Kitap Kaydet"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:orientation="vertical">
 
             <LinearLayout
@@ -497,18 +527,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btnKitapEkle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_style"
-                        android:text="Kitap Kaydet"
-                        android:textSize="18sp" />
-                </LinearLayout>
+                    android:orientation="horizontal"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
