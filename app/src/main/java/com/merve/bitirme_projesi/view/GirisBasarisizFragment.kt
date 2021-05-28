@@ -14,7 +14,7 @@ class GirisBasarisizFragment : Fragment(R.layout.fragment_giris_basarisiz) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnBasarisizKayit.setOnClickListener {
+            btnBasarisizKayit.setOnClickListener {
             val actionbkayit=GirisBasarisizFragmentDirections.actionGirisBasarisizFragmentToKayitFragment()
             Navigation.findNavController(it).navigate(actionbkayit)
 
