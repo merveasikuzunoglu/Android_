@@ -153,7 +153,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/edit_text_style"
                         android:ems="10"
-                        android:hint="Telefon No(50*******5)"
+                        android:hint="Telefon No (5**-***-****)"
                         android:inputType="textPersonName"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -175,19 +175,21 @@
                     android:orientation="horizontal"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp">
+                    android:paddingBottom="10dp"
+                    >
 
                     <EditText
                         android:id="@+id/edtSifreKayit1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="256dp"
+                        android:layout_height="89dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_style"
                         android:ems="10"
                         android:hint="Şifre:"
-
                         android:inputType="textPersonName"
                         android:textAlignment="center" />
+
+
                 </LinearLayout>
 
             </LinearLayout>
