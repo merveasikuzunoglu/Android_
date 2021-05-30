@@ -8,6 +8,7 @@ import android.util.Log
 import android.util.Patterns
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.ProjectAPI.ProjeApi
 import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 import com.merve.bitirme_projesi.model.KayitRequest
@@ -28,13 +29,33 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
     }
 
     fun initAction(){
+        edtilce.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(ililceValidate( edtilce.text.toString())){
+                    btnKayit.isEnabled=true }
+                else{
+                    btnKayit.isEnabled=false
+                    edtilce.error = "İlçe Büyük Harfle Yazılmalı" } }
+            override fun afterTextChanged(s: Editable?) {} })
+        edtil.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(ililceValidate(edtil.text.toString())){
+                    btnKayit.isEnabled=true }
+                else{
+                    btnKayit.isEnabled=false
+                    edtil.error = "İl Büyük Harfle Yazılmalı" }
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+
+        })
         edtTel.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-
                 if(telValidate(edtTel.text.toString())){
                     btnKayit.isEnabled=true
                 }
@@ -105,6 +126,14 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
         }
     }
 
+    private fun ililceValidate(textil: String?): Boolean {
+        var i=Pattern.compile("(?=.*[A-Z]).{2,}")
+        var l=i.matcher(textil)
+        return l.matches()
+
+    }
+
+
     private fun sifreValidate(textsifre: String?): Boolean {
 
         var s=Pattern.compile("^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z]).{8,}")
@@ -139,11 +168,11 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                     val userk = response.body()
                     val e = userk!!.email
                     Log.e("token", " $e email adresi ile kayit sağlandı")
-                    /*   view?.let{
+                    view?.let{
                      val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
                      Navigation.findNavController(it).navigate(actionk)
 
-                 }*/
+                 }
                 } else if (response.code() == 400) {
                     Log.e("error", "böyle bir kullanıcı zaten var")
                 }
