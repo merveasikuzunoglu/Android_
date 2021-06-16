@@ -93,6 +93,8 @@ class MenuyeGecisActivity : AppCompatActivity() ,NavigationView.OnNavigationItem
                 changeFragment(HesabimFragment())
 
 
+
+
             }
 
 

@@ -1,11 +1,14 @@
 package com.merve.bitirme_projesi
 
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputFilter
+import android.text.TextWatcher
 import android.util.Log
 import android.util.Patterns
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.merve.bitirme_projesi.ProjectAPI.ProjeApi
 import com.merve.bitirme_projesi.ProjectAPI.RetrofitProvider
 import com.merve.bitirme_projesi.model.KayitRequest
@@ -26,9 +29,58 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
     }
 
     fun initAction(){
+        edtilce.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(ililceValidate( edtilce.text.toString())){
+                    btnKayit.isEnabled=true }
+                else{
+                    btnKayit.isEnabled=false
+                    edtilce.error = "İlçe Büyük Harfle Yazılmalı" } }
+            override fun afterTextChanged(s: Editable?) {} })
+        edtil.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(ililceValidate(edtil.text.toString())){
+                    btnKayit.isEnabled=true }
+                else{
+                    btnKayit.isEnabled=false
+                    edtil.error = "İl Büyük Harfle Yazılmalı" }
+            }
 
-        //val speciCharRegex= ("^"+"(?=.*[0-9])"+"(?=.*[A-Z])"+"(?=.*[a-z])"+"(?=.*[a-zA-Z])"+"(?=S+$)"+".{8,}"+"$")
-        val speciCharRegex= "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z])(?=S+\\$).{8,}$"
+            override fun afterTextChanged(s: Editable?) {}
+
+        })
+        edtTel.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(telValidate(edtTel.text.toString())){
+                    btnKayit.isEnabled=true
+                }
+                else{
+                    btnKayit.isEnabled=false
+                    edtTel.error = "Telefon numarası 5**-***-**** formatında olmalı"
+                }
+            }
+            override fun afterTextChanged(s: Editable?) {} })
+
+        edtSifreKayit1.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(sifreValidate(edtSifreKayit1.text.toString())){
+                    btnKayit.isEnabled=true
+                }
+                else{
+                    btnKayit.isEnabled=false
+                    edtSifreKayit1.error = "Şifre büyük,küçük harf ve rakam içermeli"
+                }
+            }
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
         btnKayit.setOnClickListener{
             if(edtAd.text.isEmpty()){
                 edtAd.error="İsim gerekli"
@@ -68,38 +120,32 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                 return@setOnClickListener
             }
 
-            else if(!Patterns.PHONE.matcher(edtTel.text).matches()){
-                edtTel.error="Telefon numarası formatı doğru değil "
-                return@setOnClickListener
-            }
-
-                else if(!Pattern.matches(edtSifreKayit1.text.toString(),speciCharRegex)){
-                    edtSifreKayit1.error="Şifre büyük,küçük harf ve rakam içermeli"
-                return@setOnClickListener
-            }
-            /*
-
-
-            //"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-                //^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{4,}$
-                //^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[a-zA-Z]){8,}$
-            }*/
-
-            else if(edtSifreKayit1.length()<8){
-                edtSifreKayit1.error="Şifre 8 karakterden az olamaz"
-                return@setOnClickListener
-            }
-
-
-
-
-
-
-
             else{
                 register()
             }
         }
+    }
+
+    private fun ililceValidate(textil: String?): Boolean {
+        var i=Pattern.compile("(?=.*[A-Z]).{2,}")
+        var l=i.matcher(textil)
+        return l.matches()
+
+    }
+
+
+    private fun sifreValidate(textsifre: String?): Boolean {
+
+        var s=Pattern.compile("^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z]).{8,}")
+        var f=s.matcher(textsifre)
+        return f.matches()
+    }
+
+    private fun telValidate(text: String?): Boolean {
+
+        var p =Pattern.compile("[0-9]{3}[0-9]{3}[0-9]{4}")
+        var m=p.matcher(text)
+        return m.matches()
     }
 
 
@@ -111,8 +157,6 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
         requestk.email=edtEmail.text.toString().trim()
         requestk.password=edtSifreKayit1.text.toString().trim()
         requestk.phone=edtTel.text.toString().trim()
-            //Regex(pattern="""\\d{3}-\\d{3}-\\d{4}""").find(input=edtTel.text.toString())?.value
-
         requestk.il= (edtil.text.filters + InputFilter.AllCaps()).toString().trim()
         requestk.ilce=(edtilce.text.filters+InputFilter.AllCaps()).toString().trim()
         requestk.adres=edtAdres.text.toString().trim()
@@ -124,11 +168,12 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                     val userk = response.body()
                     val e = userk!!.email
                     Log.e("token", " $e email adresi ile kayit sağlandı")
-                    /*   view?.let{
+
+                    view?.let{
                      val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
                      Navigation.findNavController(it).navigate(actionk)
 
-                 }*/
+                 }
                 } else if (response.code() == 400) {
                     Log.e("error", "böyle bir kullanıcı zaten var")
                 }
