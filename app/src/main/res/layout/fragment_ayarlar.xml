@@ -90,11 +90,11 @@
             android:padding="25dp">
 
             <Button
-                android:id="@+id/btnKayitliKart"
+                android:id="@+id/btnBilgiGuncelle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_style"
-                android:text="Kayıtlı Kart"
+                android:text="Kullanıcı Bilgi Güncelle"
                 android:textColor="@color/ilkrenk" />
         </LinearLayout>
 

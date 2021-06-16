@@ -27,10 +27,26 @@ class Ayarlar : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btnKullaniciBilgileri.setOnClickListener{
+
+        btnKullaniciBilgileri.setOnClickListener {
+            val actKullanici=AyarlarDirections.actionAyarlarToHesabimFragment()
+            Navigation.findNavController(it).navigate(actKullanici)
+        }
+        btnBilgiGuncelle.setOnClickListener {
+            val actGuncelle=AyarlarDirections.actionAyarlarToUyeBilgGuncelle()
+            Navigation.findNavController(it).navigate(actGuncelle)
+        }
+        btnSifreDegis.setOnClickListener {
+            val actsifredegis=AyarlarDirections.actionAyarlarToSifreDegisklik()
+            Navigation.findNavController(it).navigate(actsifredegis)
+        }
+
+
+
+      /*  btnKullaniciBilgileri.setOnClickListener{
            val action_KullaniciBilgiGuncl=AyarlarDirections.actionAyarlarToUyeBilgGuncelle()
             Navigation.findNavController(it).navigate(action_KullaniciBilgiGuncl)
-        }
+        }*/
 
 
     }

@@ -23,7 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.regex.Pattern
 
-class GirisFragment : Fragment(R.layout.fragment_giris) {
+open class GirisFragment : Fragment(R.layout.fragment_giris) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -60,10 +60,10 @@ class GirisFragment : Fragment(R.layout.fragment_giris) {
         request.password=editTxtPasswordGiris.text.toString().trim()
         retro.login(request).enqueue(object : Callback<GirisResponse>{
             override fun onResponse(call: Call<GirisResponse>, response: Response<GirisResponse>) {
-     if(response.isSuccessful){
-         val user=response.body()
-         val a=user?.key
-         Log.e("token","giris yapılabilir $a" )
+                if(response.isSuccessful){
+                    val user=response.body()
+                    val a=user?.key
+                    Log.e("token","giris yapılabilir $a" )
          view?.let{
              val actiong=GirisFragmentDirections.actionGirisFragmentToMenuyeGecisActivity()
              Navigation.findNavController(it).navigate(actiong) }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradienty"
     android:orientation="vertical"
-    tools:context=".view.SiparislerimGoruntuleme">
+    tools:context="KayitFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

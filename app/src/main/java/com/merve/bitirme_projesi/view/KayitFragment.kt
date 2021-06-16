@@ -168,6 +168,7 @@ class KayitFragment : Fragment(R.layout.fragment_kayit) {
                     val userk = response.body()
                     val e = userk!!.email
                     Log.e("token", " $e email adresi ile kayit sağlandı")
+
                     view?.let{
                      val actionk=KayitFragmentDirections.actionKayitFragmentToGirisFragment()
                      Navigation.findNavController(it).navigate(actionk)

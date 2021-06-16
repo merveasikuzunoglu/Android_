@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HesabimFragment"
+    tools:context="HesabimFragment"
     android:orientation="vertical"
     android:background="@drawable/gradienty">
 
@@ -79,15 +79,29 @@
                     android:layout_weight="0.3"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtHesabimad"
+                    <LinearLayout
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="72dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="1"
+                            android:text="   Ad: "
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtad"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_height="37dp"
+                        android:layout_marginTop="30dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="@string/isim"
-                        android:inputType="textPersonName" />
+                        android:text="TextView"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -121,16 +135,29 @@
                     android:layout_weight="0.3"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtHesabimsoyad"
+                    <LinearLayout
+                        android:layout_width="97dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="1"
+                            android:text="  Soyad :"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtsoyad"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_height="37dp"
+                        android:layout_marginTop="30dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Soyisim"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:text="TextView"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -164,15 +191,29 @@
                     android:layout_weight="0.3"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtHesabimtel"
+                    <LinearLayout
+                        android:layout_width="97dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="1"
+                            android:text="  Email :"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtemail"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="30dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Telefon numarası"
-                        android:inputType="phone" />
+                        android:text="TextView"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -208,20 +249,73 @@
                     android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="411dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtHesabimemail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Email Adresi"
-                        android:inputType="textEmailAddress" />
+                    <LinearLayout
+                        android:layout_width="97dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="71dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView48"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:text=" İl :"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView49"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text=" İlçe : "
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:text="TextView"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtilce"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="TextView"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -255,16 +349,29 @@
                     android:layout_weight="0.3"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTxtHesabimadres"
+                    <LinearLayout
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_weight="1"
+                            android:text=" Adres : "
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtadres"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="Adres"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:text="TextView"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
